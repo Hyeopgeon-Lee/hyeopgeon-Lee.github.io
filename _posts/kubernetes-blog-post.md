@@ -118,4 +118,4 @@
 📎 출처:
 - https://kubernetes.io
 - https://www.cncf.io
-- 한국폴리텍대학 강의자료
+- 한국폴리텍대학 빅데이터과 이협건 교수 강의자료
