@@ -1,0 +1,42 @@
+name: Generate sitemap.xml
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v3
+
+      - name: Node.js 설치
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: sitemap-generator-cli 설치
+        run: npm install -g sitemap-generator-cli
+
+      - name: sitemap.xml 생성
+        run: |
+          sitemap-generator https://hyeopgeon-lee.github.io \
+            --filepath sitemap.xml \
+            --max-depth 0
+
+      - name: 변경사항 커밋 및 푸시
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+          git add sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "🔄 자동 생성된 sitemap.xml"
+            git push
+          fi
