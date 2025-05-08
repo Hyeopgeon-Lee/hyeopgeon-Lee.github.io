@@ -25,8 +25,7 @@ jobs:
       - name: sitemap.xml 생성
         run: |
           sitemap-generator https://hyeopgeon-lee.github.io \
-            --filepath sitemap.xml \
-            --max-depth 0
+            --filepath sitemap.xml
 
       - name: 변경사항 커밋 및 푸시
         run: |
