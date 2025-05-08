@@ -153,4 +153,4 @@ topologySpreadConstraints:
 
 📎 참고자료:
 - https://kubernetes.io/docs/concepts/scheduling-eviction/
-- 한국폴리텍대학 강의자료
+- 한국폴리텍대학 서울강서캠퍼스 빅데이터과 이협건 교수 강의자료
