@@ -9,12 +9,12 @@
 ---
 
 ## 📚 강의 과목
-- 클라우드 네이티브 애플리케이션 실습
-- 쿠버네티스 기반 서비스 운영
-- 빅데이터 분석 및 실습 (Hadoop, Spark, Kafka)
-- 인공지능 구현 실습 (PyTorch, TensorFlow, LLM)
+- 클라우드 네이티브 애플리케이션 개발 실습(Spring Boot, Spring Cloud ...)
+- 쿠버네티스 기반 서비스 운영(네이버 클라우드 플랫폼 NKS)
+- 빅데이터플랫폼실습 (Hadoop, Spark)
+- 인공지능 구현 및 활용 실습 (TensorFlow, LLM)
 - 마이크로서비스 아키텍처 (MSA) 설계 및 구축
-- 데이터베이스 및 NoSQL 실무 (MongoDB, Redis)
+- 데이터베이스 및 NoSQL 프로그래밍(MongoDB, Redis)
 
 ---
 
