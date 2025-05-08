@@ -18,11 +18,8 @@ Pod는 쿠버네티스에서 **컨테이너가 실제로 실행되는 가장 작
 
 아래는 Pod가 생성되고 종료되기까지 거치는 주요 상태입니다:
 
-```
-[Pending] → [Running] → [Succeeded] 또는 [Failed]
-                   ↘
-             [CrashLoopBackOff] (오류 반복 시)
-```
+![image](https://github.com/user-attachments/assets/360d8bf3-5d42-4e2c-b5a6-2be4775725cf)
+
 
 이 상태들은 `kubectl get pods` 명령어를 통해 확인할 수 있습니다.
 
