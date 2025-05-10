@@ -33,7 +33,7 @@ author:
       url: "https://github.com/hyeopgeon-lee"
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "mailto:your@email.com"
+      url: "mailto:hglee67@kopo.ac.kr"
 
 # 메뉴 설정 (필요 시 `_data/navigation.yml`로 옮길 수 있음)
 # navigation:
