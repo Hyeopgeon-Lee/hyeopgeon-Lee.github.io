@@ -24,7 +24,7 @@ seo:
 # 사이트 구성
 author:
   name: "이협건"
-  avatar: "/assets/images/profile.jpg" # 이미지 파일 경로
+  avatar: "/assets/images/profile.jpg"
   bio: "한국폴리텍대학 서울강서캠퍼스 빅데이터과 교수"
   location: "Seoul, South Korea"
   links:
@@ -35,21 +35,12 @@ author:
       icon: "fas fa-envelope"
       url: "mailto:hglee67@kopo.ac.kr"
 
-# 메뉴 설정 (필요 시 `_data/navigation.yml`로 옮길 수 있음)
-# navigation:
-#   - title: "Home"
-#     url: "/"
-#   - title: "About"
-#     url: "/about/"
-
-# 댓글 시스템 예시 (원하면 Disqus, Giscus 등 연동 가능)
-# comments:
-#   provider: "giscus"
-#   giscus:
-#     repo: "사용자명/저장소"
-#     repo_id: "..."
-#     category: "..."
-#     category_id: "..."
+# 메뉴 설정
+navigation:
+  - title: "소개"
+    url: "/"
+  - title: "기술 블로그"
+    url: "/blog/"
 
 # 마크다운 설정
 markdown: kramdown
