@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "(4장)쿠버네티스 네트워킹의 기초: Pod는 어떻게 통신할까?"
 date: 2025-05-09
 ---
