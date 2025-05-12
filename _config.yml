@@ -47,13 +47,16 @@ defaults:
       type: "posts"
     values:
       css: "/assets/css/custom.css"
+
   - scope:
       path: ""
       type: "pages"
     values:
       css: "/assets/css/custom.css"
 
+
 include:
   - _includes
   - _includes/head.html
+  - _includes/head/custom.html
 
