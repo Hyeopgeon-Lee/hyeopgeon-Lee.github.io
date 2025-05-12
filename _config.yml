@@ -35,13 +35,13 @@ author:
       icon: "fas fa-envelope"
       url: "mailto:hglee67@kopo.ac.kr"
 
-# 코드 하이라이터 및 마크다운 설정
+# 코드 하이라이팅 및 마크다운 설정
 highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
 
-# 사용자 CSS 적용
+# 사용자 CSS 설정
 sass:
   style: compressed
 
@@ -49,5 +49,10 @@ defaults:
   - scope:
       path: ""
       type: "posts"
+    values:
+      css: "/assets/css/custom.css"
+  - scope:
+      path: ""
+      type: "pages"
     values:
       css: "/assets/css/custom.css"
