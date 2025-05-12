@@ -56,3 +56,8 @@ defaults:
       type: "pages"
     values:
       css: "/assets/css/custom.css"
+
+# 사용자 head HTML 삽입을 허용
+include:
+  - _includes
+
