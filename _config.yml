@@ -35,6 +35,7 @@ author:
       icon: "fas fa-envelope"
       url: "mailto:hglee67@kopo.ac.kr"
 
+highlighter: rouge
 # 마크다운 설정
 markdown: kramdown
 kramdown:
