@@ -24,7 +24,7 @@ seo:
 # 사이트 구성
 author:
   name: "이협건"
-  avatar: "/assets/images/profile.jpg" # 이미지가 없으면 제거 가능
+  avatar: "/assets/images/profile.jpg"
   bio: "한국폴리텍대학 서울강서캠퍼스 빅데이터과 교수"
   location: "Seoul, South Korea"
   links:
@@ -35,8 +35,19 @@ author:
       icon: "fas fa-envelope"
       url: "mailto:hglee67@kopo.ac.kr"
 
+# 코드 하이라이터 및 마크다운 설정
 highlighter: rouge
-# 마크다운 설정
 markdown: kramdown
 kramdown:
   input: GFM
+
+# 사용자 CSS 적용
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      css: "/assets/css/custom.css"
