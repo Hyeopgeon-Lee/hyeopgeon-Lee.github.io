@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "(2장)쿠버네티스의 핵심 구성 요소: Pod, Deployment, Service 이해하기"
 date: 2025-05-07
 ---

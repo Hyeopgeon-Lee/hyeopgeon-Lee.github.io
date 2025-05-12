@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "ReplicaSet, StatefulSet, DaemonSet 차이점 이해하기"
 date: 2025-05-12
 ---

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "(5장) 쿠버네티스 스케줄링 원리: Pod는 어떻게 배치될까?"
 date: 2025-05-10
 ---
