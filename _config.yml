@@ -54,4 +54,6 @@ defaults:
       css: "/assets/css/custom.css"
 
 include:
-  - _includes/head/custom.html
+  - _includes
+  - _includes/head.html
+
