@@ -88,7 +88,7 @@ Pod는 쿠버네티스에서 **컨테이너가 실제로 실행되는 가장 작
 
 다음과 같은 명령어로 일부러 잘못된 Pod를 만들어 상태를 확인할 수 있습니다:
 
-```yaml
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -100,7 +100,7 @@ spec:
     command: ['sh', '-c', 'exit 1']
 ```
 
-```bash
+```
 kubectl apply -f crash-test.yaml
 kubectl get pods
 kubectl describe pod crash-test
@@ -109,7 +109,7 @@ kubectl describe pod crash-test
 이 Pod는 `exit 1` 명령으로 항상 실패하기 때문에 CrashLoopBackOff 상태로 진입하게 됩니다.
 
 또 다른 예시:
-```yaml
+```
 apiVersion: v1
 kind: Pod
 metadata:

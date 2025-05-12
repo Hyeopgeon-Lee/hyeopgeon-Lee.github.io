@@ -93,12 +93,12 @@ Node 라벨 기준으로 “이런 Node에 배치해주세요!”
 ## 🧪 실습 예시
 
 ### 🏷️ 1. 특정 Node에 라벨 붙이기
-```bash
+```
 kubectl label nodes node1 disktype=ssd
 ```
 
 ### 📦 2. 해당 라벨이 있는 Node에만 배치되는 Pod 만들기
-```yaml
+```
 spec:
   affinity:
     nodeAffinity:
@@ -118,7 +118,7 @@ spec:
 “같은 종류의 Pod가 한 곳에 몰리면 장애 발생 시 위험해요.”  
 ⇒ 그래서 **Pod들을 골고루 분산시키는 기능**이 필요합니다.
 
-```yaml
+```
 topologySpreadConstraints:
   - maxSkew: 1
     topologyKey: kubernetes.io/hostname

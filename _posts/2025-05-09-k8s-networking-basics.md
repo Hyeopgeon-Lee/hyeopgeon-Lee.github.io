@@ -51,7 +51,7 @@ Pod는 자주 생성·삭제되므로, IP가 바뀌는 문제를 해결하기 �
 - **기본 서비스 타입**
 - **내부 통신 전용 가상 IP**를 부여
 
-```bash
+```
 kubectl expose deployment myapp --port=80 --target-port=8080 --name=myapp-svc
 ```
 
@@ -69,7 +69,7 @@ kubectl expose deployment myapp --port=80 --target-port=8080 --name=myapp-svc
 쿠버네티스는 **CoreDNS**를 이용해  
 `서비스명.네임스페이스.svc.cluster.local` 형태의 주소로 통신합니다.
 
-```bash
+```
 curl http://myapp-svc
 ```
 
@@ -79,7 +79,7 @@ curl http://myapp-svc
 
 ## 🛠 실습 예시: ClusterIP 통신 확인
 
-```bash
+```
 kubectl create deployment web --image=nginx
 kubectl expose deployment web --port=80 --target-port=80 --name=web-svc
 kubectl run curl-pod --image=busybox --restart=Never -it -- sh

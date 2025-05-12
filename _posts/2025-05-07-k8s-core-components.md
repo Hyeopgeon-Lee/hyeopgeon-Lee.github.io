@@ -104,7 +104,7 @@ date: 2025-05-07
 
 ## 🛠 예시 실습: 웹 서버 배포 흐름 보기
 
-```yaml
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -126,7 +126,7 @@ spec:
         - containerPort: 80
 ```
 
-```yaml
+```
 apiVersion: v1
 kind: Service
 metadata:
