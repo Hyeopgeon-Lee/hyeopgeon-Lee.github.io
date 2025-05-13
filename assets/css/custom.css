@@ -16,10 +16,25 @@ table thead {
   font-weight: bold;
 }
 
+/* 복사 버튼 스타일 */
 .copy-button {
-  float: right;
-  margin: 4px;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
   padding: 2px 6px;
   font-size: 0.8em;
   cursor: pointer;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* 코드 블록 스타일 */
+.highlight {
+  background-color: #f8f8f8; /* 회색 배경 */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1em;
+  position: relative;
+  overflow-x: auto;
 }
