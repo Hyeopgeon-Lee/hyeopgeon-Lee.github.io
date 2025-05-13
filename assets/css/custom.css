@@ -15,3 +15,11 @@ table thead {
   background-color: #f3f3f3;
   font-weight: bold;
 }
+
+.copy-button {
+  float: right;
+  margin: 4px;
+  padding: 2px 6px;
+  font-size: 0.8em;
+  cursor: pointer;
+}

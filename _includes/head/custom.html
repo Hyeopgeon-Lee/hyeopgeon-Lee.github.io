@@ -1,0 +1,21 @@
+<script src="{{ '/assets/js/clipboard.min.js' | relative_url }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const codeBlocks = document.querySelectorAll('pre');
+        codeBlocks.forEach(block => {
+            const button = document.createElement('button');
+            button.textContent = '📋 복사';
+            button.className = 'copy-button';
+            block.parentNode.insertBefore(button, block);
+
+            const clipboard = new ClipboardJS(button, {
+                target: () => block
+            });
+
+            clipboard.on('success', () => {
+                button.textContent = '✅ 복사됨!';
+                setTimeout(() => button.textContent = '📋 복사', 2000);
+            });
+        });
+    });
+</script>
