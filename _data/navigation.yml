@@ -1,5 +1,5 @@
 main:
-  - title: "소개"
+  - title: "홈"
     url: "/"
   - title: "기술 블로그"
     url: "/blog/"
