@@ -59,4 +59,11 @@ include:
   - _includes/head.html
   - _includes/head/custom.html
 
+# 기존 설정 아래에 추가
+nav:
+  - title: "홈"
+    url: "/"
+  - title: "기술 블로그"
+    url: "/blog/"
+
 
