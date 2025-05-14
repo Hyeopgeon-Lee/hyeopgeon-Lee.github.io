@@ -1,11 +1,7 @@
 ---
-layout: splash
+layout: home
 title: "이협건 교수의 기술 노트"
 author_profile: true
-header:
-  overlay_color: "#f0f0f0"
-  overlay_filter: "0.3"
-  caption: "한국폴리텍대학 서울강서캠퍼스 빅데이터과"
 ---
 
 💡 **안녕하세요.**
