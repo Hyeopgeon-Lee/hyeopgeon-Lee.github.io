@@ -148,4 +148,4 @@ Ingress는 하나의 URL로 여러 서비스를 나누어 제공할 수 있는 �
 - https://kubernetes.io/docs/concepts/services-networking/
 - https://www.weave.works/
 - https://cilium.io/
-- 한국폴리텍대학 서울강서캠퍼스 빅데이터과 이협건 교수 강의자료
+- 한국폴리텍대학 서울강서캠퍼스 빅데이터소프트웨어공학과 이협건 교수 강의자료

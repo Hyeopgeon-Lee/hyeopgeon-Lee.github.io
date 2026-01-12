@@ -1,4 +1,4 @@
-title: "빅데이터과 이협건 교수 블로그"
+title: "빅데이터소프트웨어공학과 이협건 교수 블로그"
 description: "클라우드, 인공지능, 빅데이터 교육과 연구개발"
 url: "https://hyeopgeon-lee.github.io"
 baseurl: "" # 루트에서 운영하면 공백
@@ -23,7 +23,7 @@ seo:
 author:
   name: "이협건"
   avatar: "/assets/images/profile.jpg"
-  bio: "한국폴리텍대학 서울강서캠퍼스 빅데이터과 교수"
+  bio: "한국폴리텍대학 서울강서캠퍼스 빅데이터소프트웨어공학과 교수"
   location: "Seoul, South Korea"
   links:
     - label: "GitHub"
@@ -65,5 +65,3 @@ nav:
     url: "/"
   - title: "기술 블로그"
     url: "/blog/"
-
-
