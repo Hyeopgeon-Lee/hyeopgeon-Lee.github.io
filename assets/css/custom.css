@@ -1,40 +1,256 @@
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1rem 0;
-}
-
-table th,
-table td {
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  text-align: left;
-}
-
-table thead {
-  background-color: #f3f3f3;
-  font-weight: bold;
-}
-
-/* 복사 버튼 스타일 */
-.copy-button {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  padding: 4px 8px;
-  font-size: 0.8em;
-  cursor: pointer;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  z-index: 10; /* ← 가장 중요 */
-}
-
-.highlight {
-  position: relative; /* 버튼 기준 위치 설정 */
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 1em;
-  overflow: visible; /* ← 잘림 방지 */
-}
+diff --git a/assets/css/custom.css b/assets/css/custom.css
+index 194f8fd2bb802a86868130b8c2f4b1ca8a149853..3a6bfbcced1535c255ece7671f559a44c62b6fc5 100644
+--- a/assets/css/custom.css
++++ b/assets/css/custom.css
+@@ -1,40 +1,232 @@
++:root {
++  color-scheme: light dark;
++  --bg: #f6f7fb;
++  --surface: #ffffff;
++  --text: #1f2933;
++  --muted: #52606d;
++  --primary: #1f6feb;
++  --border: #d9e2ec;
++  --code-bg: #f3f4f6;
++  --code-text: #0f172a;
++  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
++}
++
++* {
++  box-sizing: border-box;
++}
++
++body {
++  margin: 0;
++  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Segoe UI", system-ui,
++    -apple-system, sans-serif;
++  font-size: 17px;
++  line-height: 1.8;
++  color: var(--text);
++  background: var(--bg);
++  -webkit-font-smoothing: antialiased;
++}
++
++.content {
++  max-width: 860px;
++  margin: 48px auto 96px;
++  padding: 0 24px;
++  background: var(--surface);
++  border-radius: 20px;
++  box-shadow: var(--shadow);
++}
++
++.content > :first-child {
++  margin-top: 0;
++  padding-top: 48px;
++}
++
++.content > :last-child {
++  margin-bottom: 0;
++  padding-bottom: 64px;
++}
++
++p {
++  margin: 1.1rem 0;
++  color: var(--text);
++}
++
++strong {
++  color: var(--text);
++}
++
++h1,
++h2,
++h3,
++h4 {
++  margin: 2.6rem 0 1rem;
++  line-height: 1.3;
++  letter-spacing: -0.02em;
++  color: var(--text);
++}
++
++h1 {
++  font-size: 2.4rem;
++  margin-top: 0;
++}
++
++h2 {
++  font-size: 1.8rem;
++  border-bottom: 1px solid var(--border);
++  padding-bottom: 0.5rem;
++}
++
++h3 {
++  font-size: 1.4rem;
++}
++
++a {
++  color: var(--primary);
++  text-decoration: none;
++}
++
++a:hover {
++  text-decoration: underline;
++}
++
++ul,
++ol {
++  padding-left: 1.3rem;
++  margin: 1.2rem 0;
++  color: var(--text);
++}
++
++li + li {
++  margin-top: 0.4rem;
++}
++
++blockquote {
++  margin: 1.5rem 0;
++  padding: 1rem 1.2rem;
++  border-left: 4px solid var(--primary);
++  background: #eef4ff;
++  color: var(--muted);
++  border-radius: 8px;
++}
++
++hr {
++  border: none;
++  border-top: 1px solid var(--border);
++  margin: 2.5rem 0;
++}
++
++code {
++  font-family: "Fira Code", "JetBrains Mono", "SFMono-Regular", ui-monospace, SFMono-Regular,
++    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
++  font-size: 0.95em;
++  background: var(--code-bg);
++  color: var(--code-text);
++  padding: 0.2em 0.4em;
++  border-radius: 6px;
++}
++
++pre {
++  margin: 1.5rem 0;
++  padding: 1.2rem 1.4rem;
++  background: var(--code-bg);
++  border-radius: 12px;
++  overflow-x: auto;
++}
++
++pre code {
++  background: none;
++  padding: 0;
++  font-size: 0.95rem;
++  color: var(--code-text);
++  line-height: 1.7;
++}
++
+ table {
+   border-collapse: collapse;
+   width: 100%;
+-  margin: 1rem 0;
++  margin: 1.5rem 0;
++  font-size: 0.95rem;
+ }
+ 
+ table th,
+ table td {
+-  border: 1px solid #ccc;
+-  padding: 0.5rem;
++  border: 1px solid var(--border);
++  padding: 0.75rem 0.9rem;
+   text-align: left;
+ }
+ 
+ table thead {
+-  background-color: #f3f3f3;
+-  font-weight: bold;
++  background-color: #f3f6f9;
++  font-weight: 600;
+ }
+ 
+ /* 복사 버튼 스타일 */
+ .copy-button {
+   position: absolute;
+-  top: 0.5em;
+-  right: 0.5em;
+-  padding: 4px 8px;
+-  font-size: 0.8em;
++  top: 0.6em;
++  right: 0.6em;
++  padding: 6px 10px;
++  font-size: 0.75em;
+   cursor: pointer;
+-  background-color: #eee;
+-  border: 1px solid #ccc;
+-  border-radius: 4px;
+-  z-index: 10; /* ← 가장 중요 */
++  background-color: #ffffff;
++  color: var(--muted);
++  border: 1px solid var(--border);
++  border-radius: 6px;
++  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1);
++  z-index: 10;
++}
++
++.copy-button:hover {
++  color: var(--text);
+ }
+ 
+ .highlight {
+-  position: relative; /* 버튼 기준 위치 설정 */
+-  background-color: #f8f8f8;
+-  border: 1px solid #ddd;
+-  border-radius: 5px;
+-  padding: 1em;
+-  overflow: visible; /* ← 잘림 방지 */
++  position: relative;
++  background-color: var(--code-bg);
++  border: 1px solid var(--border);
++  border-radius: 12px;
++  padding: 1rem;
++  overflow: visible;
++}
++
++@media (max-width: 720px) {
++  body {
++    font-size: 16px;
++  }
++
++  .content {
++    margin: 24px 0 64px;
++    border-radius: 0;
++    box-shadow: none;
++    padding: 0 18px;
++  }
++
++  h1 {
++    font-size: 2rem;
++  }
++}
++
++@media (prefers-color-scheme: dark) {
++  :root {
++    --bg: #0b1120;
++    --surface: #111827;
++    --text: #e5e7eb;
++    --muted: #9ca3af;
++    --primary: #60a5fa;
++    --border: #1f2937;
++    --code-bg: #0f172a;
++    --code-text: #e2e8f0;
++    --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
++  }
++
++  blockquote {
++    background: rgba(96, 165, 250, 0.1);
++  }
++
++  table thead {
++    background-color: #1f2937;
++  }
++
++  .copy-button {
++    background-color: #0f172a;
++  }
+ }
