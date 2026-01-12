@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
   <body>
-    {{ content }}
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="inner">
+        <div class="site-brand">
+          <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+          <p class="site-tagline">{{ site.description }}</p>
+        </div>
+        <nav class="site-nav" aria-label="주요 내비게이션">
+          {% for item in site.nav %}
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container">
+        <section class="hero">
+          <div class="author-profile">
+            {% if site.author.avatar %}
+              <img class="author-avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+            {% else %}
+              <div class="author-avatar">{{ site.author.name | slice: 0,1 }}</div>
+            {% endif %}
+            <div class="author-meta">
+              <h1>{{ site.author.name }}</h1>
+              <p>{{ site.author.bio }}</p>
+              <p class="muted">{{ site.author.location }}</p>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <p class="notice--info">이 블로그는 클라우드, 인공지능, 빅데이터 관련 자료를 다룹니다. 최신 글은 아래에서 확인하세요.</p>
+          </div>
+        </section>
+
+        <div class="layout-grid">
+          <article class="content">
+            {{ content }}
+          </article>
+
+          <aside class="sidebar" aria-label="사이드바">
+            <div class="widget">
+              <h3>최근 글</h3>
+              <ul class="recent-posts">
+                {% for post in site.posts limit:6 %}
+                  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><span class="meta"> · {{ post.date | date: "%Y-%m-%d" }}</span></li>
+                {% endfor %}
+              </ul>
+            </div>
+
+            <div class="widget">
+              <h3>태그</h3>
+              {% if site.tags %}
+                <ul class="tag-list">
+                  {% for tag in site.tags %}
+                    <li><a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% else %}
+                <p class="muted">태그가 없습니다.</p>
+              {% endif %}
+            </div>
+
+          </aside>
+        </div>
+
+        <footer class="site-footer">
+          <div class="footer-inner">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name }} · <a href="{{ site.url }}">{{ site.url }}</a></p>
+          </div>
+        </footer>
+
+      </div>
+    </main>
   </body>
 </html>

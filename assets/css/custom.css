@@ -1,40 +1,68 @@
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1rem 0;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+:root{
+  --bg: #f7f9fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-2: #06b6d4;
+  --border: #e6edf3;
+  --radius: 12px;
+  --max-width: 980px;
 }
-
-table th,
-table td {
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  text-align: left;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background:var(--bg);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.7;
+  font-size:16px;
 }
-
-table thead {
-  background-color: #f3f3f3;
-  font-weight: bold;
-}
-
+.container{max-width:var(--max-width);margin:32px auto;padding:0 20px}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:8px;top:8px;width:auto;height:auto;background:#fff;padding:8px;border-radius:6px;box-shadow:0 6px 18px rgba(2,6,23,0.08)}
+.site-header{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));backdrop-filter:blur(6px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+.site-header .inner{max-width:var(--max-width);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.site-title{font-weight:700;font-size:1.05rem;color:var(--accent);margin:0;text-decoration:none}
+.site-tagline{margin:0;font-size:0.9rem;color:var(--muted);margin-left:8px}
+.site-nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:500}
+.site-nav a:hover{color:var(--accent)}
+.hero{background:linear-gradient(90deg, rgba(37,99,235,0.05), rgba(6,182,212,0.02));padding:20px;border-radius:var(--radius);margin:18px 0;display:flex;gap:20px;align-items:flex-start}
+.hero h1{font-size:1.4rem;margin:0 0 8px 0;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.author-profile{display:flex;gap:14px;align-items:center}
+.author-avatar{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:1.1rem;flex-shrink:0}
+.author-meta{font-size:0.95rem;color:var(--muted)}
+.notice--info{border-left:4px solid var(--accent);background:linear-gradient(180deg, rgba(37,99,235,0.02), rgba(6,182,212,0.01));padding:12px 14px;border-radius:8px;color:var(--muted);margin-top:6px}
+.layout-grid{display:grid;grid-template-columns:1fr 300px;gap:22px;margin-top:18px}
+.content{min-height:200px}
+.sidebar .widget{background:var(--card);border:1px solid var(--border);padding:12px;border-radius:10px;margin-bottom:14px}
+.recent-posts{list-style:none;padding:0;margin:0}
+.recent-posts li{margin:8px 0;font-size:0.95rem}
+.recent-posts a{color:var(--accent);text-decoration:none}
+.tag-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.tag-list a{background:#eef6ff;padding:6px 8px;border-radius:8px;color:var(--accent);text-decoration:none;font-size:0.9rem}
+.site-footer{margin:28px 0 60px}
+.site-footer .footer-inner{color:var(--muted);font-size:0.9rem}
+/* 포스트 카드 */
+.post{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.03);margin-bottom:16px}
+.post h2{margin:0 0 8px 0;font-size:1.05rem}
+.post .meta{font-size:0.9rem;color:var(--muted)}
+/* 코드 블록 */
+pre{background:#0b1220;color:#e6eef8;padding:14px;border-radius:10px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,'Roboto Mono','Courier New',monospace;font-size:0.95rem;line-height:1.5;border:1px solid rgba(255,255,255,0.04)}
+code{background:rgba(2,6,23,0.04);padding:2px 6px;border-radius:6px;font-size:0.95em}
+/* 테이블 기본 */
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+table th,table td{border:1px solid #ddd;padding:0.6rem;text-align:left}
+table thead{background:#f7fafc;font-weight:700}
 /* 복사 버튼 스타일 */
-.copy-button {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  padding: 4px 8px;
-  font-size: 0.8em;
-  cursor: pointer;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  z-index: 10; /* ← 가장 중요 */
-}
-
-.highlight {
-  position: relative; /* 버튼 기준 위치 설정 */
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 1em;
-  overflow: visible; /* ← 잘림 방지 */
-}
+.copy-button{position:absolute;top:0.6em;right:0.6em;padding:6px 10px;font-size:0.85em;cursor:pointer;background:#fff;border:1px solid var(--border);border-radius:8px;z-index:10;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.highlight{position:relative;background-color:#0b1220;border-radius:8px;padding:0.75rem;overflow:visible}
+/* 반응형 */
+@media (max-width:900px){.layout-grid{grid-template-columns:1fr}.site-nav a{margin-left:12px}.hero{flex-direction:column;align-items:stretch}.container{padding:0 16px}}
+/* 작은 시각적 개선 */
+a{color:var(--accent)}
+img{max-width:100%;height:auto;border-radius:8px}
