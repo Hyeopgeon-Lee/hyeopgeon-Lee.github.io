@@ -45,63 +45,63 @@ date: 2026-01-29
 
 아래에서 각 Factor를 **MSA + 클라우드 네이티브 관점**에서 해설합니다.
 
-### 1️⃣ Codebase – 하나의 코드베이스, 여러 배포
+### 1. Codebase – 하나의 코드베이스, 여러 배포
 - **하나의 서비스 = 하나의 코드베이스**
 - 환경(dev, stage, prod)은 코드가 아니라 **설정으로 구분**
 - 👉 서비스 단위 독립성의 출발점
 
-### 2️⃣ Dependencies – 의존성은 명시적으로 선언
+### 2. Dependencies – 의존성은 명시적으로 선언
 - 시스템에 설치된 라이브러리에 의존하지 않음
 - 빌드 시점에 모든 의존성 명확히 정의
 - 👉 컨테이너 이미지의 **재현성 보장**
 
-### 3️⃣ Config – 설정은 코드가 아닌 환경 변수로
+### 3. Config – 설정은 코드가 아닌 환경 변수로
 - DB 주소, API Key, 비밀 정보는 코드에 포함 ❌
 - 환경 변수 또는 Secret으로 관리 ⭕
 - 👉 Kubernetes **ConfigMap/Secret** 철학의 기반
 
-### 4️⃣ Backing Services – 외부 서비스는 교체 가능해야 한다
+### 4. Backing Services – 외부 서비스는 교체 가능해야 한다
 - DB, 메시지 큐, 캐시를 로컬 라이브러리처럼 취급
 - 구현체에 종속되지 않음
 - 👉 서비스 간 **결합도 최소화**
 
-### 5️⃣ Build, Release, Run – 단계 명확히 분리
+### 5. Build, Release, Run – 단계 명확히 분리
 - Build: 이미지 생성
 - Release: 설정 결합
 - Run: 실행
 - 👉 CI/CD 파이프라인 자동화의 핵심 원칙
 
-### 6️⃣ Processes – Stateless 프로세스
+### 6. Processes – Stateless 프로세스
 - 애플리케이션은 상태를 가지지 않음
 - 상태는 DB, Object Storage, Cache로 외부화
 - 👉 Kubernetes 자동 스케일링의 전제 조건
 
-### 7️⃣ Port Binding – 포트 기반 서비스 노출
+### 7. Port Binding – 포트 기반 서비스 노출
 - WAS에 배포 ❌
 - 애플리케이션 자체가 포트를 열고 서비스 제공 ⭕
 - 👉 컨테이너 네이티브 서비스 모델
 
-### 8️⃣ Concurrency – 프로세스 수평 확장
+### 8. Concurrency – 프로세스 수평 확장
 - Scale-up이 아닌 **Scale-out**
 - 인스턴스 수를 늘려 처리량 확장
 - 👉 Kubernetes HPA, ReplicaSet 철학과 연결
 
-### 9️⃣ Disposability – 빠른 시작, 우아한 종료
+### 9. Disposability – 빠른 시작, 우아한 종료
 - 컨테이너는 언제든 종료될 수 있음
 - SIGTERM 처리, 빠른 기동 필수
 - 👉 장애 복구 & 무중단 배포의 핵심
 
-### 🔟 Dev/Prod Parity – 개발/운영 환경 일관성
+### 10. Dev/Prod Parity – 개발/운영 환경 일관성
 - 개발 환경과 운영 환경 차이를 최소화
 - “운영에서만 터지는 장애” 제거
 - 👉 Docker 기반 로컬 개발의 이유
 
-### 1️⃣1️⃣ Logs – 로그는 이벤트 스트림
+### 11. Logs – 로그는 이벤트 스트림
 - 로그 파일을 저장하지 않음
 - stdout/stderr로 출력 후 수집
 - 👉 EFK/Observability 스택과 직결
 
-### 1️⃣2️⃣ Admin Processes – 관리 작업도 일회성 프로세스
+### 12. Admin Processes – 관리 작업도 일회성 프로세스
 - DB 마이그레이션, 배치 작업도 동일한 실행 모델
 - 별도 서버 ❌
 - 👉 Kubernetes Job/CronJob의 개념적 뿌리
@@ -166,10 +166,3 @@ date: 2026-01-29
 > 클라우드 네이티브 구현의 출발점은 **도구가 아니라 설계 원칙**입니다.
 
 ---
-
-✅ **추천 키워드**
-- 클라우드 네이티브 설계
-- MSA 아키텍처
-- 12-Factor App
-- Kubernetes 운영 원칙
-- DevOps / GitOps
