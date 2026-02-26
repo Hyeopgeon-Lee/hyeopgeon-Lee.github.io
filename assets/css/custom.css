@@ -249,6 +249,15 @@ body{
   .site-tagline{display:none}
 }
 
+@media (max-width: 640px){
+  .site-header .inner{
+    justify-content: flex-end;
+  }
+  .site-brand{
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce){
   *{scroll-behavior:auto !important;transition:none !important;animation:none !important}
 }
