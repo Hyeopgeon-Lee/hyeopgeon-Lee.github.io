@@ -17,9 +17,24 @@ author_profile: true
 
 ---
 
+## 이번 주 주요 기술 이슈
+
+{% assign latest_post = site.posts | first %}
+{% if latest_post %}
+<div class="post-card">
+  <div class="post-card__meta">NEW · {{ latest_post.date | date: "%Y-%m-%d" }}</div>
+  <a class="post-card__title" href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
+  {% if latest_post.excerpt %}
+  <div class="post-card__excerpt">{{ latest_post.excerpt | strip_html | truncate: 200 }}</div>
+  {% endif %}
+</div>
+{% endif %}
+
+---
+
 ## 최근 글
 
-{% for post in site.posts limit: 10 %}
+{% for post in site.posts offset: 1 limit: 9 %}
 <div class="post-card">
   <a class="post-card__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
   <div class="post-card__meta">{{ post.date | date: "%Y-%m-%d" }}</div>
