@@ -8,7 +8,7 @@
 {% if page.url == '/' %}
   {% assign is_home = true %}
 {% endif %}
-<body class="{% if is_home %}home-page{% elsif page.date %}post-page{% else %}sub-page{% endif %}">
+<body class="{% if is_home %}home-page{% elsif page.date %}post-page{% elsif page.research_page %}sub-page research-page{% else %}sub-page{% endif %}">
   <a class="skip-link" href="#main">본문 바로가기</a>
 
   <header class="site-header">

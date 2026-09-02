@@ -63,8 +63,8 @@ include:
 nav:
   - title: "홈"
     url: "/"
-  - title: "연구"
-    url: "/#research"
+  - title: "연구실적"
+    url: "/research/"
   - title: "교육"
     url: "/#teaching"
   - title: "기술 블로그"

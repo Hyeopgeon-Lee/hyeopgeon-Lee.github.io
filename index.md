@@ -161,6 +161,7 @@ description: "한국폴리텍대학 서울강서캠퍼스 이협건 교수의 �
       <div>
         <h3>Research</h3>
         <p>AI, 클라우드 네이티브, 빅데이터, 소프트웨어 엔지니어링의 접점에서 새로운 가능성을 연구합니다.</p>
+        <a class="summary-link" href="{{ '/research/' | relative_url }}">연구실적 보기 <span aria-hidden="true">→</span></a>
       </div>
     </article>
   </div>
