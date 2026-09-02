@@ -2,15 +2,18 @@
 layout: default
 title: "기술 블로그"
 permalink: /blog/
-author_profile: true
 ---
 
-📚 이곳은 이협건 교수의 기술 블로그입니다.  
-클라우드, 인공지능, 빅데이터 관련 실습 기반 강의와 기술 노트를 공유합니다.
+<div class="blog-intro">
+  <p class="eyebrow">TECHNICAL NOTES</p>
+  <h1>기술 블로그</h1>
+  <p>AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링을 직접 탐구하고 가르치며 정리한 기록입니다.</p>
+</div>
 
----
-
-## 전체 글
+<div class="blog-list-heading">
+  <h2>전체 글</h2>
+  <span>{{ site.posts | size }} Articles</span>
+</div>
 
 {% for post in site.posts %}
 <div class="post-card">

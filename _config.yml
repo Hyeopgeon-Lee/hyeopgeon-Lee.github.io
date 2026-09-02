@@ -1,5 +1,5 @@
-title: "빅데이터소프트웨어공학과 이협건 교수 블로그"
-description: "클라우드, 인공지능, 빅데이터 교육과 연구개발"
+title: "이협건 교수"
+description: "AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 교육과 연구"
 url: "https://hyeopgeon-lee.github.io"
 baseurl: "" # 루트에서 운영하면 공백
 
@@ -14,9 +14,9 @@ plugins:
   - jekyll-seo-tag
 
 seo:
-  type: "Blog"
-  name: "이협건 교수 블로그"
-  description: "클라우드, 인공지능, 빅데이터 교육과 연구개발"
+  type: "Person"
+  name: "이협건 교수"
+  description: "AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 교육과 연구"
 
 # Google Analytics (원하면 추적 ID 입력)
 # google_analytics: G-XXXXXXXXXX
@@ -60,9 +60,12 @@ include:
   - _includes/head.html
   - _includes/head/custom.html
 
-# 기존 설정 아래에 추가
 nav:
   - title: "홈"
     url: "/"
+  - title: "연구"
+    url: "/#research"
+  - title: "교육"
+    url: "/#teaching"
   - title: "기술 블로그"
     url: "/blog/"
