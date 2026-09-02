@@ -154,6 +154,7 @@ description: "한국폴리텍대학 서울강서캠퍼스 이협건 교수의 �
       <div>
         <h3>Teaching</h3>
         <p>프로젝트와 실습을 중심으로, 졸업 후 바로 활용할 수 있는 문제 해결 역량을 함께 키웁니다.</p>
+        <a class="summary-link" href="{{ '/teaching/' | relative_url }}">교육과 실적 보기 <span aria-hidden="true">→</span></a>
       </div>
     </article>
     <article class="summary-item" id="research">

@@ -66,6 +66,6 @@ nav:
   - title: "연구실적"
     url: "/research/"
   - title: "교육"
-    url: "/#teaching"
+    url: "/teaching/"
   - title: "기술 블로그"
     url: "/blog/"
