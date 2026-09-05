@@ -1,0 +1,86 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "_posts/**"
+      - "blog/**"
+      - "index.md"
+      - "research.md"
+      - "teaching.md"
+      - "sitemap.xml"
+      - "_config.yml"
+      - "bc528227558a4b4db06fc7b82b96c9a5.txt"
+      - ".github/workflows/indexnow.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-prof-blog
+  cancel-in-progress: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    env:
+      SITE_HOST: prof.k-bigdata.kr
+      INDEXNOW_KEY: bc528227558a4b4db06fc7b82b96c9a5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Wait for the IndexNow key to be published
+        shell: bash
+        run: |
+          set -euo pipefail
+          key_url="https://${SITE_HOST}/${INDEXNOW_KEY}.txt"
+
+          for attempt in {1..18}; do
+            if curl --fail --silent --show-error "$key_url" | grep --fixed-strings --line-regexp "$INDEXNOW_KEY"; then
+              exit 0
+            fi
+            sleep 10
+          done
+
+          echo "IndexNow key was not available at $key_url" >&2
+          exit 1
+
+      - name: Notify IndexNow about sitemap URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mapfile -t urls < <(sed -n 's:.*<loc>\(.*\)</loc>.*:\1:p' sitemap.xml)
+          if [ "${#urls[@]}" -eq 0 ]; then
+            echo "No URLs were found in sitemap.xml" >&2
+            exit 1
+          fi
+
+          url_json=$(printf '%s\n' "${urls[@]}" | jq --raw-input . | jq --slurp .)
+          jq --null-input \
+            --arg host "$SITE_HOST" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "https://${SITE_HOST}/${INDEXNOW_KEY}.txt" \
+            --argjson urlList "$url_json" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}' \
+            > indexnow-payload.json
+
+          status=$(curl --silent --show-error \
+            --output indexnow-response.txt \
+            --write-out '%{http_code}' \
+            --header 'Content-Type: application/json; charset=utf-8' \
+            --data-binary @indexnow-payload.json \
+            https://api.indexnow.org/indexnow)
+
+          if [ "$status" != "200" ] && [ "$status" != "202" ]; then
+            echo "IndexNow returned HTTP $status" >&2
+            cat indexnow-response.txt >&2
+            exit 1
+          fi
+
+          echo "IndexNow accepted ${#urls[@]} URLs with HTTP $status."
