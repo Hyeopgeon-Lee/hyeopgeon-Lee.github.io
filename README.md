@@ -6,10 +6,12 @@ AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 분야의 연구
 
 ## 바로가기
 
-- [홈페이지](https://hyeopgeon-lee.github.io/)
-- [연구실적](https://hyeopgeon-lee.github.io/research/)
-- [교육](https://hyeopgeon-lee.github.io/teaching/)
-- [기술 블로그](https://hyeopgeon-lee.github.io/blog/)
+- [홈페이지](https://prof.k-bigdata.kr/)
+- [연구실적](https://prof.k-bigdata.kr/research/)
+- [교육](https://prof.k-bigdata.kr/teaching/)
+- [기술 블로그](https://prof.k-bigdata.kr/blog/)
+- [학과 홈페이지](https://ai.k-bigdata.kr/)
+- [졸업생 포트폴리오](https://portfolio.k-bigdata.kr/)
 
 ## 사이트 구성
 
@@ -94,7 +96,7 @@ excerpt: "홈과 블로그 목록에 표시할 게시글 요약"
 게시글 URL은 기존 GitHub Pages 규칙에 따라 다음과 같이 생성됩니다.
 
 ```text
-https://hyeopgeon-lee.github.io/YYYY/MM/DD/slug.html
+https://prof.k-bigdata.kr/YYYY/MM/DD/slug.html
 ```
 
 ## 로컬 실행

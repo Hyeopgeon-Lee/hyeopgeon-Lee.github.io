@@ -161,7 +161,7 @@ teaching_page: true
     <p>AI·데이터 분석·클라우드 네이티브 프로젝트를 포트폴리오로 발전시키고, 공모전과 학술대회를 통해 현장에서 통하는 문제 해결 역량을 검증합니다.</p>
   </div>
   <div class="outcome-actions">
-    <a class="button button--primary" href="https://github.com/Hyeopgeon-Lee/portfolio">학생 포트폴리오 보기 <span aria-hidden="true">↗</span></a>
+    <a class="button button--primary" href="https://portfolio.k-bigdata.kr/">학생 포트폴리오 보기 <span aria-hidden="true">↗</span></a>
     <a class="button button--secondary" href="mailto:hglee67@kopo.ac.kr">교육 문의</a>
   </div>
 </section>

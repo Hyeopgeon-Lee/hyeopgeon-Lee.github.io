@@ -24,7 +24,7 @@ jobs:
 
       - name: sitemap.xml 생성
         run: |
-          sitemap-generator https://hyeopgeon-lee.github.io \
+          sitemap-generator https://prof.k-bigdata.kr \
             --filepath sitemap.xml
 
       - name: 변경사항 커밋 및 푸시

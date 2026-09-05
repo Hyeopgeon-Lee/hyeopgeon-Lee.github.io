@@ -1,6 +1,6 @@
 title: "이협건 교수"
 description: "AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 교육과 연구"
-url: "https://hyeopgeon-lee.github.io"
+url: "https://prof.k-bigdata.kr"
 baseurl: "" # 루트에서 운영하면 공백
 
 remote_theme: mmistakes/minimal-mistakes@4.24.0
@@ -27,6 +27,12 @@ author:
   bio: "한국폴리텍대학 서울강서캠퍼스 빅데이터소프트웨어공학과 교수"
   location: "Seoul, South Korea"
   links:
+    - label: "학과 홈페이지"
+      icon: "fas fa-graduation-cap"
+      url: "https://ai.k-bigdata.kr/"
+    - label: "졸업생 포트폴리오"
+      icon: "fas fa-folder-open"
+      url: "https://portfolio.k-bigdata.kr/"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/hyeopgeon-lee"
