@@ -12,6 +12,7 @@ AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 분야의 연구
 - [기술 블로그](https://prof.k-bigdata.kr/blog/)
 - [학과 홈페이지](https://ai.k-bigdata.kr/)
 - [졸업생 포트폴리오](https://portfolio.k-bigdata.kr/)
+- [수시 1차 원서접수](https://apply.jinhakapply.com/Notice/5041044/A)
 
 ## 사이트 구성
 

@@ -17,7 +17,7 @@ description: "한국폴리텍대학 서울강서캠퍼스 이협건 교수의 �
 
     <div class="hero-actions">
       <a class="button button--primary" href="{{ '/blog/' | relative_url }}">기술 블로그 보기 <span aria-hidden="true">→</span></a>
-      <a class="button button--secondary" href="https://github.com/hyeopgeon-lee">GitHub 방문</a>
+      <a class="button button--secondary" href="https://apply.jinhakapply.com/Notice/5041044/A" target="_blank" rel="noopener noreferrer">수시 1차 원서접수 <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 
