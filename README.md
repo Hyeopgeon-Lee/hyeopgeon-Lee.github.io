@@ -1,5 +1,13 @@
 # 이협건 교수 홈페이지
 
+[![2027학년도 빅데이터소프트웨어공학과 수시 1차 모집](https://ai.k-bigdata.kr/assets/promo/og-share-2027-susi1.png)](https://apply.jinhakapply.com/Notice/5041044/A)
+
+<p align="center">
+  <a href="https://apply.jinhakapply.com/Notice/5041044/A"><img src="https://img.shields.io/badge/2027학년도%20수시%201차-원서접수%20바로가기-CBFF3D?style=for-the-badge&labelColor=071A33" alt="2027학년도 수시 1차 원서접수 바로가기"></a>
+</p>
+
+> **원서접수 2026.09.07 — 10.01 23:59** · 한국폴리텍대학 서울강서캠퍼스 빅데이터소프트웨어공학과 신입생 모집
+
 한국폴리텍대학 서울강서캠퍼스 이협건 교수의 **연구·교육 포트폴리오와 기술 블로그**를 운영하는 GitHub Pages 저장소입니다.
 
 AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 분야의 연구실적과 교육 활동을 소개하고, 최신 기술을 분석한 글과 수업에 활용하는 공개 실습자료를 연결합니다.
