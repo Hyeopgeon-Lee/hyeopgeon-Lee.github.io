@@ -13,12 +13,11 @@
       <h2 id="post-author-title"><a rel="author" href="{{ site.author.url | relative_url }}">이협건 교수</a></h2>
       <p>한국폴리텍대학 서울강서캠퍼스<br>빅데이터소프트웨어공학과</p>
       <p class="post-author-expertise">AI · 빅데이터 · 클라우드 · 소프트웨어공학 교육 및 연구</p>
+      {% assign displayed_modified_at = page.last_modified_at | default: page.date %}
       <p class="post-author-dates">
         작성일 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
-        {% if page.last_modified_at %}
-          <span aria-hidden="true">·</span>
-          최종 수정일 <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%Y.%m.%d' }}</time>
-        {% endif %}
+        <span aria-hidden="true">·</span>
+        최종 수정일 <time datetime="{{ displayed_modified_at | date_to_xmlschema }}">{{ displayed_modified_at | date: '%Y.%m.%d' }}</time>
       </p>
       <a class="post-author-more" href="{{ site.author.url | relative_url }}">작성자 소개와 연구·교육 활동 보기 →</a>
     </div>
