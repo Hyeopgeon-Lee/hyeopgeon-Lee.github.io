@@ -62,8 +62,9 @@ AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 분야의 연구
 - Deep Navy·Blue·White 색상의 교수·기술 포트폴리오 디자인
 - 데스크톱, 태블릿, 모바일 반응형 레이아웃
 - 게시글 읽기에 집중한 1열 콘텐츠 구조
-- `jekyll-seo-tag` 기반 검색·소셜 메타데이터
-- GitHub Actions 기반 `sitemap.xml` 자동 갱신
+- 글별 `BlogPosting` 및 작성자 `ProfilePage` 구조화 데이터
+- `jekyll-sitemap` 기반 `sitemap.xml` 자동 생성
+- 글 하단 작성자·소속·편집 원칙과 주제 기반 관련 글 제공
 
 ## 주요 파일과 디렉터리
 
@@ -71,7 +72,7 @@ AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 분야의 연구
 .
 ├── _config.yml                 # 사이트 정보, 작성자, 메뉴 및 Jekyll 설정
 ├── _layouts/default.html       # 공통 헤더, 내비게이션, 본문 및 footer
-├── _includes/                  # head 및 공통 include
+├── _includes/                  # head, 구조화 데이터 및 글 하단 공통 include
 ├── _posts/                     # 기술 블로그 게시글
 ├── assets/
 │   ├── css/custom.css          # 전체 디자인과 반응형 스타일
@@ -80,9 +81,9 @@ AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 분야의 연구
 ├── index.md                    # 포트폴리오형 홈페이지
 ├── research.md                 # 연구실적 페이지
 ├── teaching.md                 # 교육 및 교육실적 페이지
+├── about.md                    # 작성자 소개 및 편집 원칙
 ├── blog/index.md               # 기술 블로그 목록
-├── sitemap.xml                 # 검색엔진 사이트맵
-└── .github/workflows/          # 사이트맵 자동화
+└── .github/workflows/          # IndexNow 검색엔진 알림 자동화
 ```
 
 ## 게시글 작성 방법
@@ -95,6 +96,8 @@ layout: default
 title: "게시글 제목"
 date: 2026-09-03 09:00:00 +0900
 excerpt: "홈과 블로그 목록에 표시할 게시글 요약"
+tags: [AI, 클라우드, 소프트웨어공학]
+ai_assisted: true # AI 보조 작성인 경우에만 사용
 ---
 
 # 게시글 제목
@@ -123,8 +126,9 @@ bundle exec jekyll serve
 ## 배포와 자동화
 
 - `main` 브랜치에 반영된 변경사항은 GitHub Pages를 통해 배포됩니다.
-- `.github/workflows/generate-sitemap.yml`이 사이트를 크롤링하여 `sitemap.xml`을 갱신합니다.
-- 사이트맵이 변경되면 GitHub Actions가 자동으로 커밋하고 최종 Pages 배포가 다시 실행됩니다.
+- `jekyll-sitemap`이 Pages 빌드마다 게시글과 정확한 `lastmod`가 포함된 `sitemap.xml`을 생성합니다.
+- `.github/workflows/indexnow.yml`은 같은 Jekyll 빌드 결과를 사용해 IndexNow 참여 검색엔진에 URL을 알립니다.
+- 사이트맵은 빌드 결과물이므로 저장소에서 직접 편집하거나 별도 커밋하지 않습니다.
 
 ## 저장소 공개 범위와 보안
 

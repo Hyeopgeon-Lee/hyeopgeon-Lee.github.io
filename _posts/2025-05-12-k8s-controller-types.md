@@ -2,6 +2,7 @@
 layout: default
 title: "ReplicaSet, StatefulSet, DaemonSet 차이점 이해하기"
 date: 2025-05-12
+tags: [Kubernetes, 클라우드, DevOps]
 ---
 
 # ⚙️ ReplicaSet, StatefulSet, DaemonSet 차이점 쉽게 이해하기

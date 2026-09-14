@@ -3,6 +3,8 @@ layout: default
 title: "AWS Lambda 90분 실행 시대: 서버리스와 배치의 경계가 바뀌었다"
 date: 2026-09-14 06:00:00 +0900
 excerpt: "AWS가 Lambda Managed Instances의 비동기·이벤트 소스 매핑 호출 제한을 15분에서 90분으로 늘렸다. 적용 범위와 비용 모델, 긴 작업을 안전하게 설계하는 체크포인트를 정리한다."
+tags: [클라우드, AWS, 서버리스]
+ai_assisted: true
 ---
 
 # AWS Lambda 90분 실행 시대

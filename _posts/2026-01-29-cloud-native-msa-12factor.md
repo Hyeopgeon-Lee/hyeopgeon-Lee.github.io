@@ -2,6 +2,7 @@
 layout: default
 title: "클라우드 네이티브 구현의 핵심 원칙: MSA와 12-Factor App으로 이해하기"
 date: 2026-01-29
+tags: [클라우드, MSA, 소프트웨어공학]
 ---
 
 # ☁️ 클라우드 네이티브 구현의 핵심 원칙

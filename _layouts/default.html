@@ -45,6 +45,9 @@
             </div>
           {% endif %}
           {{ content }}
+          {% if page.date %}
+            {% include post-footer.html %}
+          {% endif %}
         </article>
       </div>
     {% endif %}
@@ -53,7 +56,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <strong>{{ site.author.name }}</strong>
+        <strong><a href="{{ site.author.url | relative_url }}">{{ site.author.name }}</a></strong>
         <span>한국폴리텍대학 서울강서캠퍼스 · 빅데이터소프트웨어공학과</span>
       </div>
       <div class="footer-links" aria-label="외부 링크">

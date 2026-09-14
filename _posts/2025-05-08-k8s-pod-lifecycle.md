@@ -2,6 +2,7 @@
 layout: default
 title: "(3장)쿠버네티스 Pod의 생명주기와 상태 관리"
 date: 2025-05-08
+tags: [Kubernetes, 클라우드, DevOps]
 ---
 
 # 🔄 쿠버네티스 Pod의 생명주기와 상태 관리

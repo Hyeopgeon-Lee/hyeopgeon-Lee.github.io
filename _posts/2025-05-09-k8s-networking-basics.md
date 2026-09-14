@@ -2,6 +2,7 @@
 layout: single
 title: "(4장)쿠버네티스 네트워킹의 기초: Pod는 어떻게 통신할까?"
 date: 2025-05-09
+tags: [Kubernetes, 클라우드, 네트워킹]
 author_profile: false
 read_time: true
 toc: true

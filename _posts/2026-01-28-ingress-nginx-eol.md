@@ -2,6 +2,7 @@
 layout: single
 title: "Ingress-NGINX EOL(지원 종료) 발표: 무엇이 바뀌고, Gateway API로 어떻게 전환할까?"
 date: 2026-01-28
+tags: [Kubernetes, 클라우드, 네트워킹]
 author_profile: false
 read_time: true
 toc: true

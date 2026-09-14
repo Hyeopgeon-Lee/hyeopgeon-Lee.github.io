@@ -7,11 +7,13 @@ on:
     paths:
       - "_posts/**"
       - "blog/**"
+      - "about.md"
       - "index.md"
       - "research.md"
       - "teaching.md"
-      - "sitemap.xml"
       - "_config.yml"
+      - "_includes/**"
+      - "_layouts/**"
       - "bc528227558a4b4db06fc7b82b96c9a5.txt"
       - ".github/workflows/indexnow.yml"
   workflow_dispatch:
@@ -34,6 +36,15 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Set up Ruby and install the GitHub Pages bundle
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build the site and generate sitemap.xml
+        run: bundle exec jekyll build
+
       - name: Wait for the IndexNow key to be published
         shell: bash
         run: |
@@ -55,7 +66,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          mapfile -t urls < <(sed -n 's:.*<loc>\(.*\)</loc>.*:\1:p' sitemap.xml)
+          mapfile -t urls < <(sed -n 's:.*<loc>\(.*\)</loc>.*:\1:p' _site/sitemap.xml)
           if [ "${#urls[@]}" -eq 0 ]; then
             echo "No URLs were found in sitemap.xml" >&2
             exit 1

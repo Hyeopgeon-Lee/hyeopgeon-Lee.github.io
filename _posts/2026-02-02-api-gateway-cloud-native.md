@@ -2,6 +2,7 @@
 layout: default
 title: "클라우드 네이티브에서 API Gateway는 왜 필요한가?"
 date: 2026-02-02
+tags: [클라우드, MSA, API]
 ---
 
 # 🌐 클라우드 네이티브에서 API Gateway는 왜 필요한가?

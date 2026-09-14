@@ -36,3 +36,85 @@
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 <meta name="theme-color" content="#091e3a">
 
+{% if page.date %}
+{% assign author_page_url = site.author.url | absolute_url %}
+{% assign author_entity_url = author_page_url | append: '#person' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ meta_title | jsonify }},
+  "description": {{ meta_description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page.url | absolute_url | jsonify }}
+  },
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "image": {{ social_image | absolute_url | jsonify }},
+  "inLanguage": "ko-KR",
+  "author": {
+    "@type": "Person",
+    "@id": {{ author_entity_url | jsonify }},
+    "name": {{ site.author.name | jsonify }},
+    "jobTitle": {{ site.author.job_title | jsonify }},
+    "url": {{ author_page_url | jsonify }},
+    "affiliation": {
+      "@type": "Organization",
+      "name": "빅데이터소프트웨어공학과",
+      "url": "https://ai.k-bigdata.kr/",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "한국폴리텍대학 서울강서캠퍼스"
+      }
+    },
+    "sameAs": [
+      "https://github.com/Hyeopgeon-Lee"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "빅데이터소프트웨어공학과",
+    "url": "https://ai.k-bigdata.kr/",
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "한국폴리텍대학 서울강서캠퍼스"
+    }
+  }
+}
+</script>
+{% elsif page.profile_page %}
+{% assign author_page_url = page.url | absolute_url %}
+{% assign author_entity_url = author_page_url | append: '#person' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": {{ author_page_url | jsonify }},
+  "name": {{ page.title | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "@id": {{ author_entity_url | jsonify }},
+    "name": {{ site.author.name | jsonify }},
+    "jobTitle": {{ site.author.job_title | jsonify }},
+    "description": {{ site.author.bio | jsonify }},
+    "image": {{ site.author.avatar | absolute_url | jsonify }},
+    "url": {{ author_page_url | jsonify }},
+    "worksFor": {
+      "@type": "Organization",
+      "name": "빅데이터소프트웨어공학과",
+      "url": "https://ai.k-bigdata.kr/",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "한국폴리텍대학 서울강서캠퍼스"
+      }
+    },
+    "sameAs": [
+      "https://github.com/Hyeopgeon-Lee"
+    ]
+  }
+}
+</script>
+{% endif %}
+

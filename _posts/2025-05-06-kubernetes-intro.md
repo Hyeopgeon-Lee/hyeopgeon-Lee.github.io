@@ -2,6 +2,7 @@
 layout: default
 title: "(1장)쿠버네티스 이해하기: 왜 만들어졌고 어떻게 쓰일까?"
 date: 2025-05-06
+tags: [Kubernetes, 클라우드, DevOps]
 ---
 
 

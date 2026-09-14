@@ -12,6 +12,7 @@ minimal_mistakes_skin: "default"
 plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 seo:
   type: "Person"
@@ -23,8 +24,11 @@ seo:
 
 author:
   name: "이협건"
+  url: "/about/"
+  job_title: "교수"
   avatar: "/assets/images/profile.jpg"
   bio: "한국폴리텍대학 서울강서캠퍼스 빅데이터소프트웨어공학과 교수"
+  affiliation: "한국폴리텍대학 서울강서캠퍼스 빅데이터소프트웨어공학과"
   location: "Seoul, South Korea"
   links:
     - label: "학과 홈페이지"
@@ -60,6 +64,7 @@ defaults:
       type: "posts"
     values:
       css: "/assets/css/custom.css"
+      author: "이협건"
 
   - scope:
       path: ""

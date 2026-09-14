@@ -3,6 +3,8 @@ layout: default
 title: "GitHub Copilot이 PR을 승인한다: AI 코드 리뷰 자동승인과 안전한 운영 원칙"
 date: 2026-09-04 06:00:00 +0900
 excerpt: "GitHub Copilot 코드 리뷰의 PR 승인 기능이 공개 미리 보기로 추가됐다. AI 승인을 병합 조건에 포함할 때 필요한 위험 구분, 보호 규칙, 사람의 책임을 살펴본다."
+tags: [AI, GitHub, 소프트웨어공학]
+ai_assisted: true
 ---
 
 # GitHub Copilot이 PR을 승인한다: AI 코드 리뷰 자동승인과 안전한 운영 원칙

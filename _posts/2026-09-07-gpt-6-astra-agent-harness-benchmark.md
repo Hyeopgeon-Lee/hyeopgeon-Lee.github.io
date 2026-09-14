@@ -3,6 +3,8 @@ layout: default
 title: "같은 GPT-6 Astra인데 62.7%와 99.9%: AI 성능을 좌우하는 에이전트 하네스"
 date: 2026-09-07 06:00:00 +0900
 excerpt: "GPT-6 Astra의 ARC-AGI-3 점수가 실행 환경에 따라 62.7%에서 99.9%로 달라졌다. 모델뿐 아니라 도구·상태·컨텍스트를 관리하는 에이전트 하네스가 왜 중요한지 분석한다."
+tags: [AI, AI에이전트, LLM]
+ai_assisted: true
 ---
 
 # 같은 GPT-6 Astra인데 62.7%와 99.9%

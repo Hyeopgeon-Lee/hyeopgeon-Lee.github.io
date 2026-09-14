@@ -3,6 +3,8 @@ layout: default
 title: "BigQuery Graph 정식 출시: SQL 데이터웨어하우스에 GQL 그래프 분석이 들어온 이유"
 date: 2026-09-11 06:00:00 +0900
 excerpt: "Google Cloud가 BigQuery Graph를 정식 출시했다. 기존 테이블을 복사하지 않고 속성 그래프로 정의해 GQL과 SQL을 함께 사용하는 구조, 활용 사례와 설계 주의점을 살펴본다."
+tags: [빅데이터, 데이터분석, GoogleCloud]
+ai_assisted: true
 ---
 
 # BigQuery Graph 정식 출시

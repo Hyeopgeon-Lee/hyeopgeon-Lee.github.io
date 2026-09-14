@@ -2,6 +2,7 @@
 layout: default
 title: "(5장) 쿠버네티스 스케줄링 원리: Pod는 어떻게 배치될까?"
 date: 2025-05-10
+tags: [Kubernetes, 클라우드, DevOps]
 ---
 
 # 🎯 쿠버네티스 스케줄링 원리: Pod는 어떻게 배치될까?

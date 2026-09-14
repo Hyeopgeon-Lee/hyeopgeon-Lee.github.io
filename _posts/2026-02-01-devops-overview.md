@@ -2,6 +2,7 @@
 layout: default
 title: "DevOps 이해: 개발과 운영을 하나의 흐름으로 만드는 핵심 개념"
 date: 2026-02-01
+tags: [DevOps, 클라우드, 소프트웨어공학]
 ---
 
 # ⚙️ DevOps 이해

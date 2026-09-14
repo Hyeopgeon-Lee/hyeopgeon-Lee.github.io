@@ -3,6 +3,8 @@ layout: default
 title: "npm 패키지 배포에서 장기 토큰을 없애라: 다중 OIDC 신뢰 배포와 스테이징 승인"
 date: 2026-09-09 06:00:00 +0900
 excerpt: "npm이 패키지당 여러 OIDC 신뢰 배포 구성을 지원한다. 장기 배포 토큰 없이 안정·프리릴리스·스테이징 워크플로를 분리하고 공급망 위험을 낮추는 방법을 살펴본다."
+tags: [보안, GitHub, DevOps]
+ai_assisted: true
 ---
 
 # npm 패키지 배포에서 장기 토큰을 없애라

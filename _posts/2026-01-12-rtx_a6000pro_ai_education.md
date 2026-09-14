@@ -2,6 +2,7 @@
 layout: default
 title: "NVIDIA RTX A6000 Pro 워크스테이션이 AI 교육에 반드시 필요한 이유"
 date: 2026-01-12
+tags: [AI, GPU, AI교육]
 ---
 
 # 🧠 NVIDIA RTX A6000 Pro 워크스테이션이 AI 교육에 반드시 필요한 이유

@@ -2,6 +2,7 @@
 layout: default
 title: "AI Agent 구현을 위한 MCP란? 정의·특징·기존 Tool Calling 방식 비교"
 date: 2026-02-25
+tags: [AI, AI에이전트, MCP]
 ---
 
 # AI Agent를 구현하기 위한 MCP 정의와 특징, 그리고 기존 Tool Calling 방식과의 비교
