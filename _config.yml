@@ -72,11 +72,6 @@ defaults:
     values:
       css: "/assets/css/custom.css"
 
-include:
-  - _includes
-  - _includes/head.html
-  - _includes/head/custom.html
-
 nav:
   - title: "홈"
     url: "/"
