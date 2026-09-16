@@ -15,9 +15,10 @@ description: "한국폴리텍대학 서울강서캠퍼스 이협건 교수의 �
       <span>한국폴리텍대학 서울강서캠퍼스<br>빅데이터소프트웨어공학과</span>
     </div>
 
+    <p><strong data-admission="title">입학 안내</strong> · <span data-admission="countdown">공식 모집요강 확인</span><br><span data-admission="period"></span><br>면접 <span data-admission="interview">공식 안내 확인</span> · 최초 합격 발표 <span data-admission="result">공식 안내 확인</span></p><p data-admission-pending hidden></p>
     <div class="hero-actions">
       <a class="button button--primary" href="{{ '/blog/' | relative_url }}">기술 블로그 보기 <span aria-hidden="true">→</span></a>
-      <a class="button button--secondary" href="https://apply.jinhakapply.com/Notice/5041044/A" target="_blank" rel="noopener noreferrer">수시 1차 원서접수 <span aria-hidden="true">↗</span></a>
+      <a class="button button--secondary" href="https://www.kopo.ac.kr/kangseo/content.do?menu=321" data-admission-link target="_blank" rel="noopener noreferrer">입학 일정 확인 ↗</a>
     </div>
   </div>
 
