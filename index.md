@@ -24,7 +24,7 @@ description: "한국폴리텍대학 서울강서캠퍼스 이협건 교수의 �
 
   <div class="hero-visual" aria-label="이협건 교수 프로필">
     <div class="portrait-frame">
-      <picture><source srcset="{{ '/assets/images/profile.webp' | relative_url }}" type="image/webp"><img src="{{ site.author.avatar | relative_url }}" alt="이협건 교수" width="480" height="600" fetchpriority="high" decoding="async"></picture>
+      <picture><source srcset="{{ '/assets/images/profile.webp' | relative_url }}" type="image/webp"><img src="{{ site.author.avatar | relative_url }}" alt="이협건 교수" width="480" height="600" decoding="async"></picture>
     </div>
     <div class="hero-badge">
       <span class="status-dot" aria-hidden="true"></span>

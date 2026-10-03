@@ -9,6 +9,23 @@
   window.gtag("js", new Date());
   window.gtag("config", measurementId, { cookie_domain: "auto" });
 
+  // Queue page views and clicks immediately; fetch analytics after primary assets.
+  const loadAnalytics = () => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + measurementId;
+    document.head.appendChild(script);
+  };
+  const scheduleAnalytics = () => {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(loadAnalytics, { timeout: 2000 });
+    } else {
+      window.setTimeout(loadAnalytics, 0);
+    }
+  };
+  if (document.readyState === "complete") scheduleAnalytics();
+  else window.addEventListener("load", scheduleAnalytics, { once: true });
+
   const eventForLink = (link) => {
     const rawHref = link.getAttribute("href") || "";
     if (rawHref.startsWith("tel:")) return "phone_click";

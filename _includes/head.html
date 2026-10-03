@@ -29,12 +29,12 @@
 <meta name="twitter:description" content="{{ meta_description | escape }}">
 <meta name="twitter:image" content="{{ social_image | absolute_url }}">
 <meta name="twitter:image:alt" content="이협건 교수 AI·데이터 기술 블로그">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WN99333WLX"></script>
 <script defer src="{{ '/assets/js/analytics.js' | relative_url }}"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..800&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..800&display=swap" rel="stylesheet"></noscript>
+{% if page.url == '/' %}<link rel="preload" as="image" href="{{ '/assets/images/profile.webp' | relative_url }}" type="image/webp" media="(min-width: 761px)" fetchpriority="high">{% endif %}
 {% assign asset_version = site.github.build_revision %}
 {% unless asset_version %}
   {% assign asset_version = site.time | date: "%s" %}
