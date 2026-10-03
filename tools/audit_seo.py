@@ -10,7 +10,7 @@ NS = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 def read_live(path):
     start = time.perf_counter()
     try:
-        with urllib.request.urlopen(BASE + path, timeout=40) as r:
+        with urllib.request.urlopen(BASE + urllib.parse.quote(path, safe='/%?=&:+'), timeout=40) as r:
             return r.status, r.read(), round(time.perf_counter()-start, 3)
     except urllib.error.HTTPError as e:
         return e.code, e.read(), round(time.perf_counter()-start, 3)
@@ -24,7 +24,7 @@ def main():
     def read(path):
         if not args.site:
             return read_live(path)
-        target = args.site / (path.lstrip('/') + ('index.html' if path.endswith('/') else ''))
+        target = args.site / (urllib.parse.unquote(path).lstrip('/') + ('index.html' if path.endswith('/') else ''))
         return (200, target.read_bytes(), 0) if target.exists() else (404, b'', 0)
     status, data, _ = read('/sitemap.xml')
     assert status == 200, 'sitemap not available'

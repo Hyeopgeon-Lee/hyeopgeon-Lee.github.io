@@ -1,5 +1,5 @@
 """Exercise future Markdown/HTML publication without publishing test content."""
-import json, pathlib, subprocess, sys, tempfile
+import json, pathlib, subprocess, sys, tempfile, urllib.parse
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 fixtures = {
@@ -20,6 +20,16 @@ tags: [SEO검증]
 ---
 <p>HTML 파일만 추가한 경우의 자동 요약과 메타데이터를 확인하는 별도의 테스트 본문입니다.</p>
 <h2>확인할 내용</h2><p>이 글은 배포되지 않는 테스트 문서입니다.</p>
+''',
+    '2000-01-03-seo-한글-fixture.md': '''---
+title: "한글 파일명 자동 SEO 검증"
+date: 2000-01-03 09:00:00 +0900
+tags: [SEO검증]
+---
+한글 파일명과 UTF-8 URL을 사용한 기술글의 자동 배포 검증용 본문입니다.
+
+## 확인할 내용
+이 문서는 실제 사이트에 배포되지 않습니다.
 '''
 }
 paths = [ROOT / '_posts' / name for name in fixtures]
@@ -34,10 +44,11 @@ try:
         subprocess.run([sys.executable,str(ROOT/'tools/audit_seo.py'),'--site',str(destination),
                         '--strict','--output',str(report)],cwd=ROOT,check=True)
         data=json.loads(report.read_text(encoding='utf-8'))
-        locations={p['url'] for p in data['pages']}
-        for path in ['/2000/01/01/seo-markdown-fixture.html','/2000/01/02/seo-html-fixture.html']:
+        locations={urllib.parse.unquote(p['url']) for p in data['pages']}
+        for path in ['/2000/01/01/seo-markdown-fixture.html','/2000/01/02/seo-html-fixture.html',
+                     '/2000/01/03/seo-한글-fixture.html']:
             assert 'https://prof.k-bigdata.kr'+path in locations
-        print('New Markdown/HTML posts automatically pass sitemap, feed, metadata, schema and H1 checks')
+        print('New Markdown/HTML/Korean-filename posts automatically pass sitemap, feed, metadata, schema and H1 checks')
 finally:
     for p in paths:
         if p.exists(): p.unlink()
