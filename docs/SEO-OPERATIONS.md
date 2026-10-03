@@ -71,7 +71,7 @@ python tools/audit_seo.py --strict --output seo-live-audit.json
 
 ## 모바일·Core Web Vitals
 
-[PageSpeed Insights](https://pagespeed.web.dev/)에서 홈, 목록, 최근 글을 모바일/데스크톱으로 검사한다. 실제 방문자 지표는 Search Console의 Core Web Vitals/CrUX 보고서를 사용한다. 방문량이 적으면 현장 데이터가 없을 수 있다. INP는 실제 상호작용이 필요한 지표라 단일 HTTP 응답시간이나 Lighthouse의 TBT로 대체해 확정하지 않는다. 대표 사진 WebP, 명시적 이미지 크기, 지연 로드, 비동기 코드 복사와 웹폰트 `display=swap`을 유지한다.
+[PageSpeed Insights](https://pagespeed.web.dev/)에서 홈, 목록, 최근 글을 모바일/데스크톱으로 검사한다. 실제 방문자 지표는 Search Console의 Core Web Vitals/CrUX 보고서를 사용한다. 방문량이 적으면 현장 데이터가 없을 수 있다. INP는 실제 상호작용이 필요한 지표라 단일 HTTP 응답시간이나 Lighthouse의 TBT로 대체해 확정하지 않는다. 대표 사진 WebP, 명시적 이미지 크기, 지연 로드, 비동기 코드 복사와 웹폰트 `font-display: optional`을 유지한다.
 
 ## 공식 참고자료
 
@@ -84,3 +84,5 @@ python tools/audit_seo.py --strict --output seo-live-audit.json
 - [Core Web Vitals 설명](https://web.dev/articles/vitals).
 
 검색엔진은 자체 기준으로 수집·색인·노출을 결정한다. 기술적 준비와 알림을 완료해도 모든 글의 즉시 색인 또는 상위 노출을 보장할 수 없다.
+
+웹폰트 선언은 `assets/css/fonts.css`에서 같은 도메인으로 제공하며, 기존 Noto Sans KR 글꼴 파일은 Google Fonts CDN을 사용한다. 느린 연결에서 늦은 글꼴 교체로 본문이 밀리지 않도록 optional을 사용한다. 글꼴이 빠르게 준비되면 기존 글꼴을 사용하고 그렇지 않으면 기존 시스템 대체 글꼴을 사용한다. GA4는 페이지뷰·클릭 명령을 즉시 큐에 넣고 초기 페이지 로딩 뒤 유휴 시간에 라이브러리를 가져온다. 페이지를 아주 빨리 떠나는 방문은 큐가 전송되기 전에 종료될 수 있다.
