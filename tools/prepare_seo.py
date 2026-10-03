@@ -10,8 +10,10 @@ def main():
     # Shared changes alter the article's structured data, author context or related links.
     shared = ['_includes/head.html','_includes/seo-schema.html','_includes/post-footer.html',
               '_layouts/default.html','_config.yml']
-    sources = [*ROOT.glob('_posts/*'), *[ROOT / p for p in
-               ['index.md','about.md','research.md','teaching.md','blog/index.md']]]
+    tracked = subprocess.check_output(['git','ls-files','*.md','*.html'],cwd=ROOT,text=True).splitlines()
+    sources = [ROOT / p for p in tracked
+               if not p.startswith(('_includes/','_layouts/'))
+               and (ROOT / p).read_text(encoding='utf-8').startswith('---')]
     metadata = {}
     for source in sources:
         if not source.is_file(): continue

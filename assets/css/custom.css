@@ -2086,7 +2086,7 @@ a {
   width: min(var(--container), calc(100% - 40px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: start;
   gap: 24px 40px;
 }
@@ -2112,6 +2112,8 @@ a {
 
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
   gap: 20px;
 }
 
