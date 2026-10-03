@@ -7,8 +7,6 @@ tags: [GoogleCloud, MCP, 데이터엔지니어링, 생성형AI, IAM]
 ai_assisted: true
 description: "Google Cloud Data Agent Kit이 MCP 도구와 에이전트 스킬을 정식 출시했다. BigQuery·Bigtable·Spark·AlloyDB를 코딩 에이전트에 연결하는 구조와 IAM·Knowledge Catalog·실행 감사의 조건을 분석한다."
 ---
-## 코딩 에이전트가 기업 데이터를 다룰 때 필요한 권한·근거·경계
-
 SQL이나 PySpark 코드를 잘 쓰는 코딩 에이전트라도 조직의 데이터 환경을 모르면 “어떤 테이블이 공식 데이터인지”, “파티션이 어디에 있는지”, “어젯밤 파이프라인이 왜 실패했는지”를 추측하게 됩니다. 이 추측을 줄이려면 모델을 더 크게 만드는 것보다 **데이터 카탈로그·실행 도구·권한 모델을 에이전트의 작업 흐름에 연결하는 것**이 먼저입니다.
 
 Google Cloud는 2026년 9월 30일 **Data Agent Kit의 정식 출시(GA)** 를 발표했습니다. 이미 사용하는 코딩 에이전트에 Google Cloud 데이터 제품을 연결하는 MCP(Model Context Protocol) 도구와 Google이 작성한 에이전트 스킬을 묶은 무료 도구 세트입니다. GA에서는 BigQuery Graph, Bigtable, Managed Service for Apache Spark를 통한 오픈 Lakehouse 접근이 추가됐고, IDE·CLI·Cloud Shell에서의 설정도 간소화됐습니다.

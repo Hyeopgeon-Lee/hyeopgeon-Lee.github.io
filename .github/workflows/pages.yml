@@ -38,6 +38,11 @@ jobs:
         run: bundle exec jekyll build --trace
       - name: Validate all indexable pages and discovery documents
         run: python tools/audit_seo.py --site _site --strict --output seo-audit.json
+      - name: Verify automatic SEO for future Markdown and HTML posts
+        env:
+          JEKYLL_ENV: production
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/test_new_posts.py
       - uses: actions/upload-artifact@v4
         with:
           name: seo-build-audit

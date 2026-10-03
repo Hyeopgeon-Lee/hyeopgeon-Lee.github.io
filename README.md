@@ -83,7 +83,7 @@ AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 분야의 연구
 ├── teaching.md                 # 교육 및 교육실적 페이지
 ├── about.md                    # 작성자 소개 및 편집 원칙
 ├── blog/index.md               # 기술 블로그 목록
-└── .github/workflows/          # IndexNow 검색엔진 알림 자동화
+└── .github/workflows/          # 검증·Pages 배포·IndexNow 알림 자동화
 ```
 
 ## 게시글 작성 방법

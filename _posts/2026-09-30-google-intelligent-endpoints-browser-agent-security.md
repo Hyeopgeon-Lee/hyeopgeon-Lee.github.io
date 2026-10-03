@@ -7,8 +7,6 @@ tags: [Google, ChromeEnterprise, 생성형AI, 보안, 엔드포인트]
 ai_assisted: true
 description: "Google이 브라우저·운영체제·기기를 하나의 지능형 엔드포인트로 묶는 전략을 발표했다. Chrome의 멀티탭 에이전트, IT 검증 Skills, 브라우저 DLP와 관리 조건을 중심으로 기업의 AI 엔드포인트 보안 설계를 분석한다."
 ---
-## Google Intelligent Endpoints의 보안 설계 읽기
-
 업무용 브라우저는 오랫동안 사람이 여러 웹 애플리케이션을 오가며 정보를 옮기는 창구였습니다. 이제 브라우저 안의 AI가 여러 탭을 열고, 양식을 채우고, CRM과 협업 도구를 연결하며, 사용자가 정한 목표를 여러 단계로 실행하려 합니다.
 
 Google은 2026년 9월 23일 **Google Intelligent Endpoints** 전략을 발표했습니다. 엔터프라이즈 브라우저, 운영체제, 하드웨어를 하나의 엔드포인트 경험으로 묶고, 브라우저 안의 Gemini와 관리 정책을 결합하겠다는 방향입니다. 발표에는 다음 변화가 포함됐습니다.

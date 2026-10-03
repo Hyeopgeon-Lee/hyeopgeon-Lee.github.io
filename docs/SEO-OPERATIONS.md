@@ -40,7 +40,7 @@ GitHub Settings → Pages의 Source는 **GitHub Actions**다. main push마다 `.
 
 Jekyll 빌드에서 전체 sitemap과 전체 기술글 RSS를 생성한다. sitemap은 검색 대상 `default` 페이지 및 게시글만 포함하고 `noindex: true`, `sitemap: false` 페이지를 제외한다. 404, 개발 문서, tools와 인증 파일을 sitemap에 넣지 않는다. 향후 정적 페이지를 추가해도 default 레이아웃이면 자동 포함한다. 수동 sitemap URL 목록을 관리하지 않는다.
 
-빌드 결과의 모든 URL을 검사하여 오류 시 배포를 막는다. 공개된 정확한 커밋을 확인하고 실서비스를 다시 전수 검사한 뒤 IndexNow에 알린다. 검증 보고서는 Actions의 `seo-build-audit`, `seo-live-audit` 산출물에서 내려받는다. 배포 성공 후 IndexNow가 실패하면 사이트는 정상 유지되며 discovery 작업만 재실행할 수 있다.
+빌드 결과의 모든 URL을 검사하여 오류 시 배포를 막는다. 추가로 임시 Markdown/HTML 글 2개를 별도 디렉터리에 빌드해 description·layout을 생략해도 기본 SEO, sitemap, RSS가 자동 반영되는지 검증한다. 테스트 글은 실제 배포 산출물에 포함하지 않는다. 공개된 정확한 커밋을 확인하고 실서비스를 다시 전수 검사한 뒤 IndexNow에 알린다. 검증 보고서는 Actions의 `seo-build-audit`, `seo-live-audit` 산출물에서 내려받는다. 배포 성공 후 IndexNow가 실패하면 사이트는 정상 유지되며 discovery 작업만 재실행할 수 있다.
 
 ## IndexNow
 

@@ -5,8 +5,6 @@ date: 2026-01-29
 tags: [클라우드, MSA, 소프트웨어공학]
 description: "클라우드 네이티브의 설계 원칙을 MSA와 12-Factor App으로 설명합니다. 설정 분리, 무상태 프로세스와 배포·운영 방식이 확장성과 유지보수에 미치는 영향을 살펴봅니다."
 ---
-## MSA와 12-Factor App으로 이해하기
-
 클라우드 네이티브를 제대로 구현하려면 **컨테이너와 Kubernetes를 쓰는 것만으로는 부족**합니다.
 진짜 핵심은 **애플리케이션 설계 원칙**이며, 그 중심에 **MSA(Microservices Architecture)** 와 **12-Factor App**이 있습니다.
 

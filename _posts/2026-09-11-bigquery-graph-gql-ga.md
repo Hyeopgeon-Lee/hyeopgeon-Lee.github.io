@@ -7,8 +7,6 @@ tags: [빅데이터, 데이터분석, GoogleCloud]
 ai_assisted: true
 description: "Google Cloud가 BigQuery Graph를 정식 출시했다. 기존 테이블을 복사하지 않고 속성 그래프로 정의해 GQL과 SQL을 함께 사용하는 구조, 활용 사례와 설계 주의점을 살펴본다."
 ---
-## SQL 데이터웨어하우스에 GQL 그래프 분석이 들어온 이유
-
 Google Cloud는 2026년 9월 1일 **BigQuery Graph의 정식 출시(GA)**를 발표했습니다. 이제 BigQuery의 관계형 테이블을 별도 그래프 데이터베이스로 복사하지 않고 속성 그래프로 정의한 뒤, 국제 표준 Graph Query Language(GQL)로 관계와 경로를 탐색할 수 있습니다.
 
 기업 데이터의 중요한 질문은 한 행의 값만으로 답하기 어렵습니다.

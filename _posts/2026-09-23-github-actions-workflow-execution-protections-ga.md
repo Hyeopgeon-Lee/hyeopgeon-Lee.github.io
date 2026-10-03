@@ -7,8 +7,6 @@ tags: [GitHub, GitHubActions, DevSecOps, 공급망보안]
 ai_assisted: true
 description: "GitHub가 Actions 워크플로 실행 보호를 정식 출시했다. 실행 주체·이벤트 허용목록, 워크플로 파일별 정책, 평가 모드와 pull_request_target 기본 차단을 중심으로 CI/CD 공급망을 안전하게 운영하는 방법을 정리한다."
 ---
-## 누가 어떤 이벤트로 워크플로를 실행할지 잠근다
-
 GitHub Actions는 코드를 검사하고, 사이트를 배포하고, 패키지를 공개하는 자동화 엔진입니다. 편리함의 반대편에는 하나의 질문이 있습니다.
 
 > 저장소에 코드를 쓸 수 있는 사람과, 권한이 있는 워크플로를 실행할 수 있는 사람을 반드시 같게 봐야 할까?
