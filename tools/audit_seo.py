@@ -46,7 +46,7 @@ def main():
     def audit(url):
         path = urllib.parse.urlsplit(url).path
         status, data, elapsed = read(path)
-        doc = html.fromstring(data)
+        doc = html.fromstring(data, parser=html.HTMLParser(encoding='utf-8'))
         one = lambda xp: doc.xpath('string(' + xp + ')').strip()
         title = one('//title')
         desc = one('//meta[@name="description"]/@content')
@@ -85,7 +85,7 @@ def main():
         values = [x[field] for x in pages]
         if len(set(values)) != len(values): errors.append('duplicate '+field)
     posts = [x for x in urls if urllib.parse.urlsplit(x).path.endswith('.html')]
-    blog = html.fromstring(read('/blog/')[1])
+    blog = html.fromstring(read('/blog/')[1], parser=html.HTMLParser(encoding='utf-8'))
     blog_links = {urllib.parse.urljoin(BASE, x) for x in blog.xpath('//a/@href')}
     if not set(posts) <= blog_links: errors.append('posts missing from blog HTML links')
     required = [BASE+x for x in ['/','/about/','/research/','/teaching/','/blog/']]

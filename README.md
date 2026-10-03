@@ -100,7 +100,7 @@ tags: [AI, 클라우드, 소프트웨어공학]
 ai_assisted: true # AI 보조 작성인 경우에만 사용
 ---
 
-# 게시글 제목
+## 첫 번째 소제목
 
 본문을 작성합니다.
 ```
@@ -140,6 +140,7 @@ GitHub Free에서 GitHub Pages를 계속 사용하려면 저장소를 공개 상
 
 - [SEO 운영 가이드](docs/SEO-OPERATIONS.md): Google·Naver·Bing 등록, sitemap/RSS 제출, 신규 글과 색인 확인 절차.
 - [수정 전 전수 점검](docs/SEO-AUDIT.md).
+- [수정 및 배포 검증 결과](docs/SEO-RESULTS.md).
 - 등록 사이트: https://prof.k-bigdata.kr/
 - 세 검색엔진 공통 제출 sitemap: https://prof.k-bigdata.kr/sitemap.xml
 - Naver RSS/구독: https://prof.k-bigdata.kr/feed.xml
