@@ -63,7 +63,7 @@ AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 분야의 연구
 - 데스크톱, 태블릿, 모바일 반응형 레이아웃
 - 게시글 읽기에 집중한 1열 콘텐츠 구조
 - 글별 `BlogPosting` 및 작성자 `ProfilePage` 구조화 데이터
-- `jekyll-sitemap` 기반 `sitemap.xml` 자동 생성
+- Git 이력 기반 수정일과 Jekyll `sitemap.xml`·RSS 자동 생성
 - 글 하단 작성자·소속·편집 원칙과 주제 기반 관련 글 제공
 
 ## 주요 파일과 디렉터리
@@ -126,8 +126,8 @@ bundle exec jekyll serve
 ## 배포와 자동화
 
 - `main` 브랜치에 반영된 변경사항은 GitHub Pages를 통해 배포됩니다.
-- `jekyll-sitemap`이 Pages 빌드마다 게시글과 정확한 `lastmod`가 포함된 `sitemap.xml`을 생성합니다.
-- `.github/workflows/indexnow.yml`은 같은 Jekyll 빌드 결과를 사용해 IndexNow 참여 검색엔진에 URL을 알립니다.
+- GitHub Actions가 전체 Git 이력에서 수정일을 계산하고 Jekyll이 모든 검색 대상 URL의 sitemap과 전체 글 RSS를 자동 생성합니다.
+- `.github/workflows/pages.yml`은 전수 SEO 검증을 통과한 결과만 배포하고, 공개된 커밋과 실제 URL을 확인한 뒤 IndexNow에 알립니다.
 - 사이트맵은 빌드 결과물이므로 저장소에서 직접 편집하거나 별도 커밋하지 않습니다.
 
 ## 저장소 공개 범위와 보안
@@ -135,3 +135,13 @@ bundle exec jekyll serve
 이 저장소에는 웹사이트에 공개할 수 있는 정적 콘텐츠만 저장합니다. API 키, 비밀번호, 개인 자료 등 민감한 정보는 커밋하지 않습니다.
 
 GitHub Free에서 GitHub Pages를 계속 사용하려면 저장소를 공개 상태로 유지해야 합니다. GitHub Pro 이상에서는 비공개 저장소에서도 Pages를 사용할 수 있지만, 저장소가 비공개여도 배포된 홈페이지는 기본적으로 인터넷에 공개됩니다.
+
+## SEO 운영
+
+- [SEO 운영 가이드](docs/SEO-OPERATIONS.md): Google·Naver·Bing 등록, sitemap/RSS 제출, 신규 글과 색인 확인 절차.
+- [수정 전 전수 점검](docs/SEO-AUDIT.md).
+- 등록 사이트: https://prof.k-bigdata.kr/
+- 세 검색엔진 공통 제출 sitemap: https://prof.k-bigdata.kr/sitemap.xml
+- Naver RSS/구독: https://prof.k-bigdata.kr/feed.xml
+- 게시글 본문은 H2부터 작성합니다. 공통 레이아웃이 H1과 작성자·관련글을 자동 제공합니다.
+- GitHub Pages Source는 GitHub Actions를 사용합니다. 디자인과 기존 게시글 URL을 유지합니다.

@@ -1,0 +1,81 @@
+{% assign person_id = '/about/#person' | absolute_url %}
+{% assign website_id = '/#website' | absolute_url %}
+{% assign blog_id = '/blog/#blog' | absolute_url %}
+{% assign campus_id = 'https://www.kopo.ac.kr/kangseo/#organization' %}
+{% assign modified_date = site.data.seo_dates[page.path] | default: page.last_modified_at | default: page.date %}
+{% unless page.noindex %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollegeOrUniversity", "@id": {{ campus_id | jsonify }},
+      "name": "한국폴리텍대학 서울강서캠퍼스", "url": "https://www.kopo.ac.kr/kangseo/"
+    },
+    {
+      "@type": "Organization", "@id": "https://ai.k-bigdata.kr/#department",
+      "name": "빅데이터소프트웨어공학과", "url": "https://ai.k-bigdata.kr/",
+      "parentOrganization": {"@id": {{ campus_id | jsonify }}}
+    },
+    {
+      "@type": "Person", "@id": {{ person_id | jsonify }},
+      "name": {{ site.author.name | jsonify }}, "jobTitle": "교수",
+      "url": {{ '/about/' | absolute_url | jsonify }},
+      "description": {{ site.author.bio | jsonify }},
+      "image": {{ site.author.avatar | absolute_url | jsonify }},
+      "worksFor": {"@id": {{ campus_id | jsonify }}},
+      "affiliation": {"@id": "https://ai.k-bigdata.kr/#department"},
+      "knowsAbout": ["인공지능", "AI Agent", "빅데이터", "클라우드", "Cloud Native", "DevOps", "소프트웨어공학", "연구", "교육"],
+      "sameAs": ["https://github.com/Hyeopgeon-Lee"]
+    },
+    {
+      "@type": "WebSite", "@id": {{ website_id | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }}, "name": "이협건 교수 기술·교육·연구 사이트",
+      "description": {{ site.description | jsonify }}, "inLanguage": "ko-KR",
+      "publisher": {"@id": {{ person_id | jsonify }}}
+    },
+    {
+      "@type": {% if page.profile_page %}"ProfilePage"{% elsif page.url == '/blog/' %}"CollectionPage"{% else %}"WebPage"{% endif %},
+      "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+      "url": {{ canonical_url | jsonify }}, "name": {{ meta_title | jsonify }},
+      "description": {{ meta_description | jsonify }}, "inLanguage": "ko-KR",
+      "isPartOf": {"@id": {{ website_id | jsonify }}}
+      {% if page.profile_page %}, "mainEntity": {"@id": {{ person_id | jsonify }}}
+      {% elsif page.url == '/blog/' %}, "mainEntity": {"@id": {{ blog_id | jsonify }}}
+      {% else %}, "about": {"@id": {{ person_id | jsonify }}}{% endif %}
+      {% if modified_date %}, "dateModified": {{ modified_date | date_to_xmlschema | jsonify }}{% endif %}
+    }
+    {% if page.url == '/blog/' or page.date %},
+    {
+      "@type": "Blog", "@id": {{ blog_id | jsonify }},
+      "url": {{ '/blog/' | absolute_url | jsonify }},
+      "name": "이협건 교수 AI·클라우드·빅데이터 기술 블로그",
+      "inLanguage": "ko-KR", "isPartOf": {"@id": {{ website_id | jsonify }}},
+      "author": {"@id": {{ person_id | jsonify }}}
+    }{% endif %}
+    {% if page.date %},
+    {
+      "@type": "BlogPosting", "@id": {{ canonical_url | append: '#article' | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "headline": {{ page.title | jsonify }}, "description": {{ meta_description | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ modified_date | date_to_xmlschema | jsonify }},
+      "author": {"@id": {{ person_id | jsonify }}}, "publisher": {"@id": {{ person_id | jsonify }}},
+      "mainEntityOfPage": {"@id": {{ canonical_url | append: '#webpage' | jsonify }}},
+      "isPartOf": {"@id": {{ blog_id | jsonify }}},
+      "image": {{ social_image | absolute_url | jsonify }},
+      "inLanguage": "ko-KR", "articleSection": "기술 블로그",
+      "keywords": {{ page.tags | join: ', ' | jsonify }}
+    },
+    {
+      "@type": "BreadcrumbList", "@id": {{ canonical_url | append: '#breadcrumb' | jsonify }},
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "홈", "item": {{ '/' | absolute_url | jsonify }}},
+        {"@type": "ListItem", "position": 2, "name": "기술 블로그", "item": {{ '/blog/' | absolute_url | jsonify }}},
+        {"@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ canonical_url | jsonify }}}
+      ]
+    }{% endif %}
+  ]
+}
+</script>
+{% endunless %}

@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "기술 블로그"
+title: "AI·클라우드·빅데이터 기술 블로그 | 이협건 교수"
+description: "AI 에이전트, Kubernetes, 클라우드 네이티브, DevOps, 빅데이터와 소프트웨어 개발을 다룬 이협건 교수의 기술 해설 및 실무 적용 기록입니다."
 permalink: /blog/
 ---
 

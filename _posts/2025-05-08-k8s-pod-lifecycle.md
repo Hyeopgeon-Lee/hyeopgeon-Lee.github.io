@@ -3,10 +3,8 @@ layout: default
 title: "(3장)쿠버네티스 Pod의 생명주기와 상태 관리"
 date: 2025-05-08
 tags: [Kubernetes, 클라우드, DevOps]
+description: "Kubernetes Pod의 생성부터 종료까지 생명주기와 Pending, Running, Succeeded, Failed 상태를 정리합니다. 재시작 정책과 상태 확인 방법을 소개합니다."
 ---
-
-# 🔄 쿠버네티스 Pod의 생명주기와 상태 관리
-
 ## 🧩 Pod란 무엇인가요?
 
 Pod는 쿠버네티스에서 **컨테이너가 실제로 실행되는 가장 작은 단위**입니다. 보통 하나의 Pod에는 하나의 컨테이너가 들어가 있지만, 경우에 따라 여러 컨테이너가 함께 들어가기도 합니다.
@@ -19,7 +17,7 @@ Pod는 쿠버네티스에서 **컨테이너가 실제로 실행되는 가장 작
 
 아래는 Pod가 생성되고 종료되기까지 거치는 주요 상태입니다:
 
-![image](https://github.com/user-attachments/assets/360d8bf3-5d42-4e2c-b5a6-2be4775725cf)
+<img src="https://github.com/user-attachments/assets/360d8bf3-5d42-4e2c-b5a6-2be4775725cf" alt="Kubernetes Pod 생명주기와 상태 전환" width="1199" height="359" loading="lazy" decoding="async">
 
 
 이 상태들은 `kubectl get pods` 명령어를 통해 확인할 수 있습니다.

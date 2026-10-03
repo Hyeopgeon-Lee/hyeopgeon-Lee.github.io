@@ -3,9 +3,8 @@ layout: default
 title: "AI Agent 구현을 위한 MCP란? 정의·특징·기존 Tool Calling 방식 비교"
 date: 2026-02-25
 tags: [AI, AI에이전트, MCP]
+description: "AI Agent를 외부 도구와 데이터에 연결하는 MCP의 정의와 구조를 설명합니다. 기존 Tool Calling과 연결 방식, 재사용성, 권한 관리의 차이를 비교합니다."
 ---
-
-# AI Agent를 구현하기 위한 MCP 정의와 특징, 그리고 기존 Tool Calling 방식과의 비교
 ## MCP(Model Context Protocol) 개념 정리부터 실무 도입 판단 기준까지
 
 AI Agent를 구현하다 보면 결국 같은 문제를 만납니다.

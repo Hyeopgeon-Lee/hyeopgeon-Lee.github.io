@@ -2583,3 +2583,7 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Reserve copy controls before scripts run to avoid a layout shift. */
+.prose-content pre { position: relative; padding-top: 3rem; }
+.prose-content pre > .copy-button { position: absolute; top: .35rem; right: .5rem; margin: 0; }

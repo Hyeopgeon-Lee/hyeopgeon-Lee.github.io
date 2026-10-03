@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "이협건 교수 | AI · Cloud · Big Data"
+title: "이협건 교수 | AI·빅데이터·클라우드·소프트웨어 기술 블로그"
 description: "한국폴리텍대학 서울강서캠퍼스 이협건 교수의 연구·교육 포트폴리오와 기술 블로그"
 ---
 
@@ -24,7 +24,7 @@ description: "한국폴리텍대학 서울강서캠퍼스 이협건 교수의 �
 
   <div class="hero-visual" aria-label="이협건 교수 프로필">
     <div class="portrait-frame">
-      <img src="{{ site.author.avatar | relative_url }}" alt="이협건 교수" width="480" height="600">
+      <picture><source srcset="{{ '/assets/images/profile.webp' | relative_url }}" type="image/webp"><img src="{{ site.author.avatar | relative_url }}" alt="이협건 교수" width="480" height="600" fetchpriority="high" decoding="async"></picture>
     </div>
     <div class="hero-badge">
       <span class="status-dot" aria-hidden="true"></span>

@@ -3,10 +3,8 @@ layout: default
 title: "ReplicaSet, StatefulSet, DaemonSet 차이점 이해하기"
 date: 2025-05-12
 tags: [Kubernetes, 클라우드, DevOps]
+description: "ReplicaSet, StatefulSet, DaemonSet의 차이와 사용 조건을 비교합니다. 복제 수 유지, 상태가 있는 서비스, 노드별 실행에 적합한 Kubernetes 컨트롤러를 정리합니다."
 ---
-
-# ⚙️ ReplicaSet, StatefulSet, DaemonSet 차이점 쉽게 이해하기
-
 쿠버네티스(Kubernetes)는 애플리케이션을 자동으로 관리해주는 똑똑한 시스템이에요.  
 그중에서도 Pod를 **어떻게 배치하고 유지할지**를 담당하는 것이 바로 **컨트롤러(controller)**입니다.
 

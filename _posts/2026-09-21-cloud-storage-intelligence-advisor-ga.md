@@ -5,9 +5,8 @@ date: 2026-09-21 06:00:00 +0900
 excerpt: "Google Cloud가 Cloud Storage용 Storage Intelligence Advisor를 정식 출시했다. 30일 기준선, 네 가지 이상 징후, 비용·성능 드릴다운과 운영상 한계를 중심으로 스토리지 관측성을 설계하는 방법을 정리한다."
 tags: [클라우드, GoogleCloud, CloudStorage, FinOps]
 ai_assisted: true
+description: "Google Cloud가 Cloud Storage용 Storage Intelligence Advisor를 정식 출시했다. 30일 기준선, 네 가지 이상 징후, 비용·성능 드릴다운과 운영상 한계를 중심으로 스토리지 관측성을 설계하는 방법을 정리한다."
 ---
-
-# Cloud Storage를 스스로 점검한다
 ## Storage Intelligence Advisor GA의 의미
 
 클라우드 스토리지는 용량만 늘어나는 서비스가 아닙니다. 객체 수가 증가하고, 애플리케이션이 다른 리전의 버킷을 읽고, 오래 보관하려고 선택한 저비용 스토리지에 예상보다 자주 접근하면 비용과 성능 문제가 함께 생깁니다. 문제는 이런 변화가 한 프로젝트의 단일 대시보드가 아니라 조직·폴더·프로젝트·버킷·서비스 계정에 흩어져 나타난다는 점입니다.

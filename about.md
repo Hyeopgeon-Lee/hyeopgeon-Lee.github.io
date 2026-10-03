@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "작성자 소개 · 이협건 교수"
+title: "이협건 교수 소개 | 한국폴리텍대학 서울강서캠퍼스"
 description: "한국폴리텍대학 서울강서캠퍼스 빅데이터소프트웨어공학과 이협건 교수의 전문 분야, 연구·교육 활동과 기술 블로그 작성 원칙을 소개합니다."
 permalink: /about/
 profile_page: true

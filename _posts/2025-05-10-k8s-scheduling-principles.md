@@ -3,10 +3,8 @@ layout: default
 title: "(5장) 쿠버네티스 스케줄링 원리: Pod는 어떻게 배치될까?"
 date: 2025-05-10
 tags: [Kubernetes, 클라우드, DevOps]
+description: "Kubernetes 스케줄러가 Pod를 노드에 배치하는 과정을 설명합니다. 리소스 요구량, 노드 선택 조건, Affinity와 Taint·Toleration의 역할을 살펴봅니다."
 ---
-
-# 🎯 쿠버네티스 스케줄링 원리: Pod는 어떻게 배치될까?
-
 쿠버네티스는 여러 컴퓨터(Node)로 구성된 큰 시스템이에요.  
 그럼 이런 질문이 생기겠죠?
 

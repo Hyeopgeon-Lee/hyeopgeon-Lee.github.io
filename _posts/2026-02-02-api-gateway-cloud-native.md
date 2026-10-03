@@ -3,9 +3,8 @@ layout: default
 title: "클라우드 네이티브에서 API Gateway는 왜 필요한가?"
 date: 2026-02-02
 tags: [클라우드, MSA, API]
+description: "클라우드 네이티브와 마이크로서비스에서 API Gateway가 필요한 이유를 설명합니다. 라우팅, 인증, 트래픽 제어와 관측 기능의 역할 및 도입 조건을 정리합니다."
 ---
-
-# 🌐 클라우드 네이티브에서 API Gateway는 왜 필요한가?
 ## MSA 시대의 필수 인프라 이해하기
 
 클라우드 네이티브(Cloud Native)는 단순히 **“서버를 클라우드에 올린다”**는 의미가 아닙니다.  

@@ -5,9 +5,8 @@ date: 2026-09-16 06:00:00 +0900
 excerpt: "GitHub가 2026년 9월 15일 github.com과 파트너 CDN의 HTTPS/TLS에서 SHA-1을 비활성화했다. 영향 범위와 Git 커밋 SHA-1과의 차이, 오래된 개발·CI 환경을 안전하게 점검하는 방법을 정리한다."
 tags: [보안, GitHub, TLS, DevOps]
 ai_assisted: true
+description: "GitHub가 2026년 9월 15일 github.com과 파트너 CDN의 HTTPS/TLS에서 SHA-1을 비활성화했다. 영향 범위와 Git 커밋 SHA-1과의 차이, 오래된 개발·CI 환경을 안전하게 점검하는 방법을 정리한다."
 ---
-
-# GitHub가 HTTPS에서 SHA-1을 종료했다
 ## 오래된 Git·CI·프록시 점검법
 
 GitHub는 2026년 9월 15일 예정대로 **github.com과 파트너 CDN의 HTTPS/TLS에서 SHA-1 사용을 완전히 비활성화**했습니다. GitHub Enterprise Cloud와 Data Residency 환경도 대상이며, 자체 구축형 GitHub Enterprise Server는 이번 변경의 직접 대상이 아닙니다.

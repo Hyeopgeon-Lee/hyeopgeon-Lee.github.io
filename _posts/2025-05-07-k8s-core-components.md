@@ -3,10 +3,8 @@ layout: default
 title: "(2장)쿠버네티스의 핵심 구성 요소: Pod, Deployment, Service 이해하기"
 date: 2025-05-07
 tags: [Kubernetes, 클라우드, DevOps]
+description: "Kubernetes의 Pod, Deployment, Service가 맡는 역할과 관계를 설명합니다. 컨테이너 실행, 배포 상태 유지, 네트워크 접근을 실제 사용 예시로 연결합니다."
 ---
-
-# 🧱 쿠버네티스의 핵심 구성 요소: Pod, Deployment, Service 이해하기
-
 ## ✨ 시작하기 전에
 쿠버네티스를 처음 배우는 여러분, 환영합니다! 👋
 
@@ -41,7 +39,7 @@ tags: [Kubernetes, 클라우드, DevOps]
 - 보통은 하나의 Pod에 하나의 컨테이너가 들어감
 
 ### 🎨 그림으로 이해하기
-![image](https://github.com/user-attachments/assets/67c0156f-b427-4c98-a1e3-12681fcf68ea)
+<img src="https://github.com/user-attachments/assets/67c0156f-b427-4c98-a1e3-12681fcf68ea" alt="Pod와 컨테이너의 관계" width="922" height="445" loading="lazy" decoding="async">
 
 
 ### 💡 왜 Pod가 필요할까?
@@ -58,7 +56,7 @@ tags: [Kubernetes, 클라우드, DevOps]
 - Pod가 하나라면, Deployment는 **Pod를 몇 개나 만들지**, **언제 교체할지**, **문제가 생기면 어떻게 복구할지** 등을 정해주는 사람
 
 ### 🎨 그림으로 이해하기
-![image](https://github.com/user-attachments/assets/332e2d2c-7a42-4f8a-84a1-040c897ba56c)
+<img src="https://github.com/user-attachments/assets/332e2d2c-7a42-4f8a-84a1-040c897ba56c" alt="Deployment를 통한 Pod 복제와 배포 관리" width="513" height="299" loading="lazy" decoding="async">
 
 
 ### ✅ Deployment가 해주는 일
@@ -80,7 +78,7 @@ tags: [Kubernetes, 클라우드, DevOps]
 - 트래픽을 여러 Pod에 골고루 분산해줌 (로드밸런서 역할)
 
 ### 🎨 그림으로 이해하기
-![image](https://github.com/user-attachments/assets/a2d2ce9f-80bd-43ff-9e42-6dab7c8f7d1a)
+<img src="https://github.com/user-attachments/assets/a2d2ce9f-80bd-43ff-9e42-6dab7c8f7d1a" alt="Service와 Pod 연결 구조" width="922" height="445" loading="lazy" decoding="async">
 
 
 ### ✅ Service의 종류

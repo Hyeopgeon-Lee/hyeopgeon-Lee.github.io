@@ -1,0 +1,11 @@
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+vendor/
+_data/seo_dates.json
+_data/seo_build.json
+seo-audit.json
+Gemfile.lock
+__pycache__/
+*.pyc

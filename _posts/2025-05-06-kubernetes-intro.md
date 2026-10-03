@@ -3,11 +3,8 @@ layout: default
 title: "(1장)쿠버네티스 이해하기: 왜 만들어졌고 어떻게 쓰일까?"
 date: 2025-05-06
 tags: [Kubernetes, 클라우드, DevOps]
+description: "쿠버네티스가 등장한 배경과 컨테이너 오케스트레이션의 역할을 설명합니다. 자동 배포, 확장, 복구 기능과 기본 구조를 처음 배우는 독자에게 소개합니다."
 ---
-
-
-# 👾 쿠버네티스(Kubernetes) 이해하기
-
 ## 🧩 쿠버네티스는 왜 개발되었을까?
 
 ### 🔍 1. 문제의 시작: "서버 1대에 모든 걸 담는다?"
@@ -65,7 +62,7 @@ tags: [Kubernetes, 클라우드, DevOps]
 
 ## 📌 쿠버네티스 구조 한눈에 보기
 
-![쿠버네티스 기본 구조](https://kubernetes.io/images/docs/components-of-kubernetes.svg)
+<img src="https://kubernetes.io/images/docs/components-of-kubernetes.svg" alt="쿠버네티스 기본 구조" width="1352" height="649" loading="lazy" decoding="async">
 
 > 위 이미지는 Kubernetes 공식 사이트에서 제공하는 구조도입니다.
 

@@ -1,5 +1,5 @@
 title: "이협건 교수"
-description: "AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 교육과 연구"
+description: "한국폴리텍대학 서울강서캠퍼스 이협건 교수의 AI·빅데이터·클라우드·소프트웨어 기술 블로그와 연구·교육 활동"
 url: "https://prof.k-bigdata.kr"
 baseurl: "" # 루트에서 운영하면 공백
 
@@ -12,7 +12,6 @@ minimal_mistakes_skin: "default"
 plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
-  - jekyll-sitemap
 
 seo:
   type: "Person"
@@ -65,6 +64,7 @@ defaults:
     values:
       css: "/assets/css/custom.css"
       author: "이협건"
+      layout: default
 
   - scope:
       path: ""
@@ -81,3 +81,14 @@ nav:
     url: "/teaching/"
   - title: "기술 블로그"
     url: "/blog/"
+
+# Keep the original Jekyll pretty-date post routes.
+permalink: /:year/:month/:day/:title:output_ext
+exclude:
+  - README.md
+  - docs
+  - tools
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - seo-audit.json

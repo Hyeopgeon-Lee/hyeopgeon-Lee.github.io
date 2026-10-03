@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: "Ingress-NGINX EOL(지원 종료) 발표: 무엇이 바뀌고, Gateway API로 어떻게 전환할까?"
 date: 2026-01-28
 tags: [Kubernetes, 클라우드, 네트워킹]
@@ -8,10 +8,8 @@ read_time: true
 toc: true
 toc_sticky: true
 classes: wide
+description: "Ingress-NGINX 지원 종료에 따른 운영 위험과 Gateway API 전환 방향을 정리합니다. 대체 컨트롤러, 기능 차이와 단계적 마이그레이션 전략을 비교합니다."
 ---
-
-# 🛑 Ingress-NGINX 지원 종료(EOL): 무엇이 바뀌나?
-
 쿠버네티스 네트워크 진입점의 사실상 표준이던 **Ingress-NGINX가 2026년 3월 EOL(End-Of-Life)**을 맞이합니다.  
 이는 단순한 프로젝트 종료가 아니라, **클라우드 네이티브 네트워크 트래픽 관리의 패러다임 전환**을 의미합니다.
 
@@ -95,7 +93,7 @@ kubectl get pods --all-namespaces --selector app.kubernetes.io/name=ingress-ngin
 
 ---
 
-# 🚀 6. Gateway API vs Ingress: 무엇이 다른가?
+## 🚀 6. Gateway API vs Ingress: 무엇이 다른가?
 
 Ingress API는 아직 deprecated는 아니지만, **feature-frozen 상태**입니다.  
 반면 Gateway API는 **차세대 표준**으로 설계되어 **확장성/안정성/표준화**를 강화했습니다.
@@ -171,7 +169,7 @@ spec:
 
 ---
 
-# 🧭 7. 대체 Ingress Controller 후보 비교
+## 🧭 7. 대체 Ingress Controller 후보 비교
 
 Gateway API로의 전환이 최선이지만, **조직 상황상 즉시 전환이 어렵다면 다른 Ingress 컨트롤러를 고려**해야 합니다.
 
@@ -184,7 +182,7 @@ Gateway API로의 전환이 최선이지만, **조직 상황상 즉시 전환이
 
 ---
 
-# 🧩 8. 권장 마이그레이션 전략
+## 🧩 8. 권장 마이그레이션 전략
 
 ### ✅ 단계 1: 현황 파악
 - Ingress-NGINX 사용 여부 확인
@@ -204,7 +202,7 @@ Gateway API로의 전환이 최선이지만, **조직 상황상 즉시 전환이
 
 ---
 
-# ✅ 9. 결론: 지금이 전환의 타이밍
+## ✅ 9. 결론: 지금이 전환의 타이밍
 
 Ingress-NGINX EOL은 단순한 종료가 아니라, **쿠버네티스 네트워크 스택이 보다 안전하고 표준화된 모델로 이동한다는 신호**입니다.
 

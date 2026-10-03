@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.locale | default: 'ko-KR' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'ko' }}">
 <head>
   {% include head.html %}
   {% include head/custom.html %}
@@ -39,12 +39,15 @@
       <div class="reading-shell">
         <article class="content prose-content">
           {% if page.date %}
-            <div class="post-context">
+            <nav class="post-context" aria-label="경로">
+              <a href="{{ '/' | relative_url }}">홈</a>
+              <span aria-hidden="true">/</span>
               <a href="{{ '/blog/' | relative_url }}">기술 블로그</a>
               <span aria-hidden="true">/</span>
               <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
-            </div>
+            </nav>
           {% endif %}
+          {% if page.date %}<h1>{{ page.title | escape }}</h1>{% endif %}
           {{ content }}
           {% if page.date %}
             {% include post-footer.html %}
@@ -60,7 +63,12 @@
         <strong><a href="{{ site.author.url | relative_url }}">{{ site.author.name }}</a></strong>
         <span>한국폴리텍대학 서울강서캠퍼스 · 빅데이터소프트웨어공학과</span>
       </div>
-      <div class="footer-links" aria-label="외부 링크">
+      <div class="footer-links" aria-label="관련 링크">
+        <a href="{{ '/about/' | relative_url }}">소개</a>
+        <a href="{{ '/research/' | relative_url }}">연구실적</a>
+        <a href="{{ '/teaching/' | relative_url }}">교육</a>
+        <a href="{{ '/blog/' | relative_url }}">기술 블로그</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
         {% for link in site.author.links %}
           <a href="{{ link.url }}">{{ link.label }}</a>
         {% endfor %}

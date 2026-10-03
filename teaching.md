@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "교육 | 이협건 교수"
+title: "교육 및 강의 | 이협건 교수"
 description: "이협건 교수의 인공지능·빅데이터·클라우드 교육 분야, 교원 직무연수 및 프로젝트 중심 교육 성과"
 permalink: /teaching/
 teaching_page: true
