@@ -162,7 +162,7 @@ teaching_page: true
   </div>
   <div class="outcome-actions">
     <a class="button button--primary" href="https://portfolio.k-bigdata.kr/" target="_blank" rel="noopener noreferrer">학생 포트폴리오 보기 <span aria-hidden="true">↗</span></a>
-    <a class="button button--secondary" href="https://ai.k-bigdata.kr/" target="_blank" rel="noopener noreferrer">학과·입학 정보 <span aria-hidden="true">↗</span></a>
-    <a class="button button--secondary" href="https://www.kopo.ac.kr/kangseo/content.do?menu=321" data-admission-link target="_blank" rel="noopener noreferrer">입학 일정 확인 ↗</a>
+    <a class="button button--secondary" href="https://ai.k-bigdata.kr/" target="_blank" rel="noopener noreferrer">2027 입학 안내 <span aria-hidden="true">↗</span></a>
+    <a class="button button--secondary" href="https://ai.k-bigdata.kr/admission/2027/" data-admission-link target="_blank" rel="noopener noreferrer">2027 입학 안내 ↗</a>
   </div>
 </section>
