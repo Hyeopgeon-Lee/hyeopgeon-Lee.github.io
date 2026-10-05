@@ -43,6 +43,11 @@
     if (url.hostname === "open.kakao.com") return "kakao_consult_click";
     if (url.hostname === "ai.k-bigdata.kr") return "department_site_click";
     if (url.hostname === "portfolio.k-bigdata.kr") return "portfolio_click";
+    if ((url.hostname === "www.kopo.ac.kr" || url.hostname === "kopo.ac.kr") &&
+        url.pathname.startsWith("/kangseo/") &&
+        (url.searchParams.get("menu") === "321" || url.searchParams.get("menu") === "1714")) {
+      return "admission_info_click";
+    }
     if (url.hostname === "www.youtube.com" || url.hostname === "youtube.com" || url.hostname === "youtu.be") return "youtube_click";
     return null;
   };
