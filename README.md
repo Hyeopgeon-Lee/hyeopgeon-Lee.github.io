@@ -1,6 +1,6 @@
 # 이협건 교수 홈페이지
 
-> **2027학년도 입학 안내** · 현재 모집 단계와 일정은 [서울강서캠퍼스 공식 모집요강](https://www.kopo.ac.kr/kangseo/content.do?menu=321)을 기준으로 안내합니다.
+> **2027학년도 입학 안내** · 현재 모집 단계와 일정은 [서울강서캠퍼스 공식 모집요강](https://ai.k-bigdata.kr/admission/2027/)을 기준으로 안내합니다.
 
 한국폴리텍대학 서울강서캠퍼스 이협건 교수의 **연구·교육 포트폴리오와 기술 블로그**를 운영하는 GitHub Pages 저장소입니다.
 
@@ -14,7 +14,7 @@ AI, 클라우드, 빅데이터, 소프트웨어 엔지니어링 분야의 연구
 - [기술 블로그](https://prof.k-bigdata.kr/blog/)
 - [학과 홈페이지](https://ai.k-bigdata.kr/)
 - [졸업생 포트폴리오](https://portfolio.k-bigdata.kr/)
-- [2027학년도 입학안내](https://www.kopo.ac.kr/kangseo/content.do?menu=321)
+- [2027학년도 입학안내](https://ai.k-bigdata.kr/admission/2027/)
 
 ## 사이트 구성
 
