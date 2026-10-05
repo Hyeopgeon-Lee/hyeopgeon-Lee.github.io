@@ -38,7 +38,7 @@ author:
       url: "https://portfolio.k-bigdata.kr/"
     - label: "2027학년도 입학안내"
       icon: "fas fa-file-signature"
-      url: "https://www.kopo.ac.kr/kangseo/content.do?menu=321"
+      url: "https://ai.k-bigdata.kr/admission/2027/"
     - label: "개인정보·분석 안내"
       icon: "fas fa-shield-alt"
       url: "https://ai.k-bigdata.kr/privacy.html"
