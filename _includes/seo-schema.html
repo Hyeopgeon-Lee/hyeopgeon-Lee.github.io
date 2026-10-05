@@ -15,6 +15,7 @@
     {
       "@type": "Organization", "@id": "https://ai.k-bigdata.kr/#department",
       "name": "빅데이터소프트웨어공학과", "url": "https://ai.k-bigdata.kr/",
+      "sameAs": ["https://www.kopo.ac.kr/kangseo/content.do?menu=1547"],
       "parentOrganization": {"@id": {{ campus_id | jsonify }}}
     },
     {
@@ -23,10 +24,10 @@
       "url": {{ '/about/' | absolute_url | jsonify }},
       "description": {{ site.author.bio | jsonify }},
       "image": {{ site.author.avatar | absolute_url | jsonify }},
-      "worksFor": {"@id": {{ campus_id | jsonify }}},
-      "affiliation": {"@id": "https://ai.k-bigdata.kr/#department"},
+      "worksFor": {"@id": "https://ai.k-bigdata.kr/#department"},
+      "affiliation": {"@id": {{ campus_id | jsonify }}},
       "knowsAbout": ["인공지능", "AI Agent", "빅데이터", "클라우드", "Cloud Native", "DevOps", "소프트웨어공학", "연구", "교육"],
-      "sameAs": ["https://github.com/Hyeopgeon-Lee"]
+      "sameAs": ["https://www.kopo.ac.kr/kangseo/content.do?menu=1549", "https://github.com/Hyeopgeon-Lee"]
     },
     {
       "@type": "WebSite", "@id": {{ website_id | jsonify }},
