@@ -85,6 +85,49 @@ description: "한국폴리텍대학 서울강서캠퍼스 이협건 교수의 �
   </div>
 </section>
 
+
+<section class="section-block education-bridge" aria-labelledby="education-bridge-title">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">TECHNOLOGY → EDUCATION → OUTCOMES</p>
+      <h2 id="education-bridge-title">기술이 학생의 결과물이 되는 과정</h2>
+    </div>
+    <p>블로그에서 다루는 AI·데이터·클라우드 기술이 실제 수업과 학생 프로젝트로 어떻게 이어지는지 확인해 보세요.</p>
+  </div>
+
+  <div class="education-bridge-grid">
+    <a class="education-bridge-card" href="{{ '/teaching/' | relative_url }}">
+      <span>01 / EDUCATION</span>
+      <h3>수업에서 어떻게 배우는가</h3>
+      <p>AI, 빅데이터, 백엔드, 클라우드 네이티브 기술을 개념에서 구현까지 프로젝트 중심으로 연결합니다.</p>
+      <strong>교육 내용 보기 <span aria-hidden="true">→</span></strong>
+    </a>
+
+    <a class="education-bridge-card" href="https://portfolio.k-bigdata.kr/" target="_blank" rel="noopener noreferrer">
+      <span>02 / STUDENT WORK</span>
+      <h3>학생이 무엇을 만들었는가</h3>
+      <p>졸업작품과 프로젝트실습, 실제 동작하는 소프트웨어 시연을 통해 학습 결과를 확인할 수 있습니다.</p>
+      <strong>학생 포트폴리오 보기 <span aria-hidden="true">↗</span></strong>
+    </a>
+
+    <a class="education-bridge-card" href="https://ai.k-bigdata.kr/" target="_blank" rel="noopener noreferrer">
+      <span>03 / DEPARTMENT</span>
+      <h3>어떤 학과에서 배우는가</h3>
+      <p>한국폴리텍대학 서울강서캠퍼스 빅데이터소프트웨어공학과의 교육과정, 학생작품, 취업·입학 정보를 확인하세요.</p>
+      <strong>학과·입학 정보 보기 <span aria-hidden="true">↗</span></strong>
+    </a>
+  </div>
+
+  <div class="education-bridge-admission" data-admission-card>
+    <div>
+      <span data-admission="title">입학 안내</span>
+      <strong data-admission="countdown">공식 모집요강 확인</strong>
+      <small data-admission="period"></small>
+    </div>
+    <a href="https://www.kopo.ac.kr/kangseo/content.do?menu=321" data-admission-link target="_blank" rel="noopener noreferrer">입학 일정 확인 ↗</a>
+  </div>
+</section>
+
 {% assign latest_post = site.posts | first %}
 {% if latest_post %}
 <section class="section-block latest-section" aria-labelledby="latest-title">
