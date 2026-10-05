@@ -2589,3 +2589,192 @@ a {
 /* Reserve copy controls before scripts run to avoid a layout shift. */
 .prose-content pre { position: relative; padding-top: 3rem; }
 .prose-content pre > .copy-button { position: absolute; top: .35rem; right: .5rem; margin: 0; }
+
+
+/* Department outreach bridges */
+.education-bridge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.education-bridge-card {
+  min-height: 260px;
+  padding: 30px 28px 26px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--navy);
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.education-bridge-card:hover {
+  border-color: #a8c2e7;
+  box-shadow: 0 18px 42px rgba(9, 30, 58, 0.1);
+  transform: translateY(-4px);
+}
+
+.education-bridge-card > span {
+  color: var(--blue);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.education-bridge-card h3 {
+  margin: 22px 0 12px;
+  color: var(--navy);
+  font-size: 1.2rem;
+  letter-spacing: -0.035em;
+  line-height: 1.4;
+}
+
+.education-bridge-card p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.84rem;
+  line-height: 1.78;
+}
+
+.education-bridge-card strong {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--blue);
+  font-size: 0.76rem;
+}
+
+.education-bridge-admission {
+  margin-top: 16px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid #cfe0fa;
+  border-radius: 14px;
+  background: #f3f7fd;
+}
+
+.education-bridge-admission > div {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+}
+
+.education-bridge-admission span {
+  color: var(--navy);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.education-bridge-admission strong {
+  color: var(--blue);
+  font-size: 0.86rem;
+}
+
+.education-bridge-admission small {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.education-bridge-admission > a {
+  flex: 0 0 auto;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.post-education-bridge {
+  margin-top: 24px;
+  padding: 25px 26px;
+  border: 1px solid #cfe0fa;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f7faff 0%, #eef5ff 100%);
+}
+
+.post-education-bridge__eyebrow {
+  display: block;
+  color: var(--blue);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.prose-content .post-education-bridge h2 {
+  margin: 7px 0 10px;
+  padding: 0;
+  border: 0;
+  color: var(--navy);
+  font-size: 1.28rem;
+}
+
+.prose-content .post-education-bridge p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+.post-education-bridge__links {
+  margin-top: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.post-education-bridge__links a {
+  padding: 8px 11px;
+  border: 1px solid #c7d9f2;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--navy) !important;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .education-bridge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-bridge-card {
+    min-height: 0;
+  }
+
+  .education-bridge-admission {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .education-bridge-admission > a {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .post-education-bridge__links {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .post-education-bridge__links a {
+    text-align: center;
+  }
+
+  .outcome-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
