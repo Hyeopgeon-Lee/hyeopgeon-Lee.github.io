@@ -1506,6 +1506,15 @@ a {
   text-decoration: none;
 }
 
+/* Keep the primary CTA label readable over its blue background.
+   This rule must override the generic .prose-content a link color. */
+.teaching-page .outcome-actions .button--primary,
+.teaching-page .outcome-actions .button--primary:visited,
+.teaching-page .outcome-actions .button--primary:hover,
+.teaching-page .outcome-actions .button--primary:focus-visible {
+  color: #fff;
+}
+
 .teaching-page .outcome-actions .button--secondary {
   border-color: var(--border);
   color: var(--navy);
