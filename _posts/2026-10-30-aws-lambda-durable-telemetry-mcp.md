@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AWS Lambda Durable Functions 텔레메트리와 MCP: 실행 단위 관찰성을 설계하는 법"
-date: 2026-10-30 06:00:00 +0900
+date: 2026-10-30 05:50:00 +0900
 excerpt: "AWS가 2026년 10월 28일 Lambda Durable Functions용 Durable Execution Telemetry Exporter와 MCP 서버를 공개했다. 여러 Lambda 호출과 대기·재시도를 하나의 실행 기록으로 묶는 구조, 13개 전송 대상, 자연어 조회의 장점과 보안·비용·관찰성의 한계를 실무 관점에서 정리한다."
 tags: [AWSLambda, 서버리스, 관찰성, MCP, AI운영]
 ai_assisted: true
