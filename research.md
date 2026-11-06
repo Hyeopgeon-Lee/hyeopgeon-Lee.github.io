@@ -11,8 +11,8 @@ research_page: true
   <h1>연구실적</h1>
   <p>빅데이터 처리와 인공지능, 스마트 팩토리, 디지털트윈을 중심으로 수행한 2015년 이후의 학술지 논문입니다.</p>
   <div class="research-overview" aria-label="연구실적 요약">
-    <div><strong>13</strong><span>Journal Articles</span></div>
-    <div><strong>2017–2025</strong><span>Publication Years</span></div>
+    <div><strong>14</strong><span>Journal Articles</span></div>
+    <div><strong>2017–2026</strong><span>Publication Years</span></div>
     <div><strong>4</strong><span>Research Themes</span></div>
   </div>
 </header>
@@ -22,6 +22,23 @@ research_page: true
   <p>학술대회 발표 논문은 제외했습니다. 논문 제목을 선택하면 KCI, KISS, DBpia 또는 학술지 원문 페이지에서 상세 정보를 확인할 수 있습니다.</p>
 </div>
 
+<section class="publication-year" aria-labelledby="year-2026">
+  <div class="publication-year__heading">
+    <h2 id="year-2026">2026</h2>
+    <span>1 publication</span>
+  </div>
+  <div class="publication-list">
+    <article class="publication-card">
+      <span class="publication-index">01</span>
+      <div>
+        <h3><a href="https://www.kci.go.kr/kciportal/mobile/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003400833">데이터 프로파일링 기반 적응형 자동 데이터 정제 방법 <span aria-hidden="true">↗</span></a></h3>
+        <p class="publication-authors"><strong class="publication-author">이협건</strong>, 봉진숙</p>
+        <p class="publication-source"><cite>한국정보전자통신기술학회 논문지</cite> · 19(5) · 626–634 · KCI 등재</p>
+      </div>
+    </article>
+  </div>
+</section>
+
 <section class="publication-year" aria-labelledby="year-2025">
   <div class="publication-year__heading">
     <h2 id="year-2025">2025</h2>
@@ -29,7 +46,7 @@ research_page: true
   </div>
   <div class="publication-list">
     <article class="publication-card">
-      <span class="publication-index">01</span>
+      <span class="publication-index">02</span>
       <div>
         <h3><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12435804">디지털트윈 기반 실감 시뮬레이션을 통한 옥외광고 유형 및 입지별 소비자 반응 분석 <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors"><strong class="publication-author">이협건</strong>, 김영운, 이진우, 이승현</p>
@@ -37,7 +54,7 @@ research_page: true
       </div>
     </article>
     <article class="publication-card">
-      <span class="publication-index">02</span>
+      <span class="publication-index">03</span>
       <div>
         <h3><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003198023">대규모 로그 데이터 분석을 위한 패턴화 압축 기반 빅데이터 처리 시스템 연구 <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors">김원집, 김하윤, <strong class="publication-author">이협건</strong>, 김영운</p>
@@ -54,7 +71,7 @@ research_page: true
   </div>
   <div class="publication-list">
     <article class="publication-card">
-      <span class="publication-index">03</span>
+      <span class="publication-index">04</span>
       <div>
         <h3><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003012534">빅데이터 분석 시스템 구현을 위한 데이터 구조의 복잡성에 따른 MongoDB 환경 구성 연구 <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors"><strong class="publication-author">이협건</strong>, 김영운, 이진우, 이승현</p>
@@ -62,7 +79,7 @@ research_page: true
       </div>
     </article>
     <article class="publication-card">
-      <span class="publication-index">04</span>
+      <span class="publication-index">05</span>
       <div>
         <h3><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002937092">고해상도 단순 이미지의 객체 분류 학습모델 구현을 위한 개선된 CNN 알고리즘 연구 <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors"><strong class="publication-author">이협건</strong>, 김영운</p>
@@ -79,7 +96,7 @@ research_page: true
   </div>
   <div class="publication-list">
     <article class="publication-card">
-      <span class="publication-index">05</span>
+      <span class="publication-index">06</span>
       <div>
         <h3><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002689658">복잡한 구조의 데이터 중복제거를 위한 효율적인 알고리즘 연구 <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors"><strong class="publication-author">이협건</strong>, 김영운, 김기영</p>
@@ -96,7 +113,7 @@ research_page: true
   </div>
   <div class="publication-list">
     <article class="publication-card">
-      <span class="publication-index">06</span>
+      <span class="publication-index">07</span>
       <div>
         <h3><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002460584">빅데이터 처리율 향상을 위한 인-메모리 기반 하이브리드 빅데이터 처리 기법 연구 <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors"><strong class="publication-author">이협건</strong>, 김영운, 김기영</p>
@@ -113,7 +130,7 @@ research_page: true
   </div>
   <div class="publication-list">
     <article class="publication-card">
-      <span class="publication-index">07</span>
+      <span class="publication-index">08</span>
       <div>
         <h3><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002396254">빅데이터 처리시간 감소와 저장 효율성이 향상을 위한 맵리듀스 기반 빅데이터 처리 기법 구현 <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors"><strong class="publication-author">이협건</strong>, 김영운, 김기영</p>
@@ -121,7 +138,7 @@ research_page: true
       </div>
     </article>
     <article class="publication-card">
-      <span class="publication-index">08</span>
+      <span class="publication-index">09</span>
       <div>
         <h3><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002318779">Splunk 플랫폼을 활용한 유해 정보 탐지를 위한 빅데이터 분석 시스템 설계 <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors"><strong class="publication-author">이협건</strong>, 김영운, 김기영, 최종석</p>
@@ -129,7 +146,7 @@ research_page: true
       </div>
     </article>
     <article class="publication-card">
-      <span class="publication-index">09</span>
+      <span class="publication-index">10</span>
       <div>
         <h3><a href="https://kiss.kstudy.com/DetailOa/Ar?key=54228387">스마트 팩토리 환경에서의 GlusterFS 기반 빅데이터 분산 처리 시스템 설계 <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors"><strong class="publication-author">이협건</strong>, 김영운, 김기영, 최종석</p>
@@ -137,7 +154,7 @@ research_page: true
       </div>
     </article>
     <article class="publication-card">
-      <span class="publication-index">10</span>
+      <span class="publication-index">11</span>
       <div>
         <h3 lang="en"><a href="https://www.sciencepubco.com/index.php/IJET/article/view/21021">Real-time Big Data Processing System to Improve Semiconductor Production Efficiency in Smart Factory <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors" lang="en"><strong class="publication-author">Hyeopgeon Lee</strong>, Young-Woon Kim, Ki-Young Kim</p>
@@ -145,7 +162,7 @@ research_page: true
       </div>
     </article>
     <article class="publication-card">
-      <span class="publication-index">11</span>
+      <span class="publication-index">12</span>
       <div>
         <h3 lang="en"><a href="https://www.sciencepubco.com/index.php/IJET/article/view/21022">Development of real-time big data analysis system for RHIPE-based marketing in the automobile industry <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors" lang="en">Young-Woon Kim, <strong class="publication-author">Hyeopgeon Lee</strong></p>
@@ -162,7 +179,7 @@ research_page: true
   </div>
   <div class="publication-list">
     <article class="publication-card">
-      <span class="publication-index">12</span>
+      <span class="publication-index">13</span>
       <div>
         <h3 lang="en"><a href="https://doi.org/10.3923/jeasci.2017.6304.6307">Implementation of an Efficient Big Data Collection Platform for Smart Manufacturing <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors" lang="en"><strong class="publication-author">Hyeopgeon Lee</strong>, Young-Woon Kim, Ki-Young Kim</p>
@@ -170,7 +187,7 @@ research_page: true
       </div>
     </article>
     <article class="publication-card">
-      <span class="publication-index">13</span>
+      <span class="publication-index">14</span>
       <div>
         <h3 lang="en"><a href="https://doi.org/10.3923/jeasci.2017.6542.6545">Implementation of Big Data Analysis System to Prevent Illegal Sales in the Cable TV Industry <span aria-hidden="true">↗</span></a></h3>
         <p class="publication-authors" lang="en">Young-Woon Kim, <strong class="publication-author">Hyeopgeon Lee</strong></p>
