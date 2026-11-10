@@ -1,4 +1,4 @@
-/* 2027 admissions. Source: Seoul Gangseo official prospectus, p.7 (2026-09-16).
+/* 2027 admissions. Schedule: Seoul Gangseo official prospectus; 2026-11-10 susi2 seat revision from department (capacity 11, in/out quota combined, regular admissions excluded).
  * Keep identical copies in the department, portfolio and professor sites.
  * All dates have an explicit Korea offset; never infer an unannounced admission round.
  */
@@ -9,7 +9,7 @@
   const rounds = [
     {name:'수시 1차', start:'2026-09-07', end:'2026-10-01', interview:'2026-10-14', result:'2026-10-22', seats:23,
       apply:'https://apply.jinhakapply.com/Notice/5041044/A'},
-    {name:'수시 2차', start:'2026-11-11', end:'2026-11-27', interview:'2026-12-02', result:'2026-12-17', seats:4, apply:APPLY},
+    {name:'수시 2차', start:'2026-11-11', end:'2026-11-27', interview:'2026-12-02', result:'2026-12-17', seats:11, apply:APPLY},
     {name:'정시모집', start:'2027-01-04', end:'2027-01-22', interview:'2027-01-27', result:'2027-02-04', seats:3, apply:APPLY}
   ];
   const instant = (day) => Date.parse(day + 'T00:00:00+09:00');
